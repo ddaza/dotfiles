@@ -54,7 +54,18 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 " Gif config
 map  / <Plug>(easymotion-sn)
+"-------------Syntastic-----------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['jsxhint']
+
+"----------------------------
 
 set number
 colorscheme molokai
@@ -76,6 +87,9 @@ set background=dark
 set ignorecase
 set smartcase
 set t_Co=256 "set 256 colors for airline
+
+"way better option to handle moving away from files
+set confirm
 
 " 80 chars column
 "highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
@@ -102,32 +116,25 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
 "autocmd BufWrite *.py :call DeleteTrailingWS()
 "autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
+" load JS Snippets
+"let g:snipMate = {}
+"let g:snipMate.scope_aliases = {}
+"let g:snipMate.scope_aliases['javascript'] ='javascript/javascript,javascript/javascript.node,javascript/javascript-requirejs'
+""
+" mouse scrolling
+set mouse=a
+
 "autochnangedir
 set autochdir " Change pwd to the current file opened
 
 "autocomplete Parenthesis
-"When you type an open brace, this will automatically
-"insert a closing brace on the same line, after the cursor.
-"If you quickly hit Enter after the open brace, (to begin
-"a code block), the closing brace will be inserted on the
-"line below the cursor. If you quickly press the open brace
-"key again after the open brace, Vim won't insert anything extra,
-" you'll just get a single open brace. Finally, if you quickly
-"type an open and close brace, Vim will not do anything special.
-inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
+inoremap {{     {{}}<Left><Left>
 
-inoremap (      ()<Left>
 inoremap (<CR>  (<CR>)<Esc>O
-inoremap ((     (
-inoremap ()     ()
+inoremap ({<CR>  ({<CR>})<Esc>O
 
-inoremap [      []<Left>
 inoremap [<CR>  [<CR>]<Esc>O
-inoremap [[     [
-inoremap []     []
 
 " Code Folding
 set foldmethod=indent
