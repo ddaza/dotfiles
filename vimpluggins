@@ -1,14 +1,13 @@
-ack.vim
-supertab
-syntastic
-tlib_vim
-vim-addon-mw-utils
-vim-airline
-vim-easymotion
-vim-jade
-vim-less
-vimpluggins
-vim-snipmate
-vim-snippets
-vim-surround
-vim-tabber
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle
+git clone https://github.com/mileszs/ack.vim.git
+git clone https://github.com/ervandew/supertab.git
+git clone https://github.com/scrooloose/syntastic.git
+git clone https://github.com/tomtom/tlib_vim.git
+git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
+git clone https://github.com/garbas/vim-snipmate.git
+git clone https://github.com/honza/vim-snippets.git
+git clone https://github.com/bling/vim-airline.git
+git clone https://github.com/Lokaltog/vim-easymotion.git
+git clone https://github.com/tpope/vim-surround.git
+git clone https://github.com/fweep/vim-tabber.git

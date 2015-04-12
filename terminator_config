@@ -3,6 +3,7 @@
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_transmit_bg_color = "#03014a"
   title_inactive_bg_color = "#7f7f7f"
+  close_button_on_tab = False
 [keybindings]
 [profiles]
   [[default]]

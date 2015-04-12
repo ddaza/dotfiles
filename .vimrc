@@ -144,3 +144,5 @@ set foldlevel=1
 
 "cursorline to see where are you
 set cursorline
+" Avoid ESC key Two semicolons are easy to type.
+imap ;; <Esc>

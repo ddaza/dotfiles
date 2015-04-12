@@ -1,3 +1,10 @@
+#custom adds
+
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
+
 alias ll='ls -al'
 alias cls='tput reset'
 alias tmux='TERM=screen-256color-bce tmux'
