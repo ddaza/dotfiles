@@ -6,6 +6,13 @@ filetype plugin indent on
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
+"-------------ControlP-----
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = 'node_modules\|git'
+let g:ctrlp_show_hidden = 1
+
 "-------------AirLine-------------
 let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts = 1

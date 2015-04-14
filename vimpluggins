@@ -11,3 +11,4 @@ git clone https://github.com/bling/vim-airline.git
 git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/fweep/vim-tabber.git
+git clone https://github.com/kien/ctrlp.vim.git
