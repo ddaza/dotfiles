@@ -1,6 +1,6 @@
 #!/bin/bash
-#mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-#cd ~/.vim/bundle
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle
 
 # --- javascript --- 
 git clone https://github.com/marijnh/tern_for_vim.git
@@ -24,6 +24,5 @@ git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/kien/ctrlp.vim.git
-#git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/othree/html5.vim.git
 git clone https://github.com/ervandew/supertab.git
