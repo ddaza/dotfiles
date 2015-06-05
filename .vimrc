@@ -72,6 +72,7 @@ map  / <Plug>(easymotion-sn)
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
@@ -83,6 +84,13 @@ let g:syntastic_check_on_wq = 0
 "let g:syntastic_debug = 32
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>
+
+"----------vim-javascript----------
+"syntax enable
+"set regexpengine=1
+"let g:jsx_ext_required = 0
+"let tern#is_show_argument_hints_enabled = 1
+"autocmd CompleteDone * pclose
 
 "------------SnipMate-------------
 " load JS Snippets
@@ -173,6 +181,7 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 autocmd BufWrite *.js :call DeleteTrailingWS()
+autocmd BufWrite *.scss :call DeleteTrailingWS()
 "autocmd BufWrite *.py :call DeleteTrailingWS()
 "autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
@@ -212,3 +221,8 @@ nnoremap Q <nop>
 nmap <F2> :update<CR>
 vmap <F2> <Esc><F2>gv
 imap <F2> <c-o><F2>
+
+"Disable F1 from popping up stuff
+map <F1> <Esc>
+vmap <F1> <Esc>
+imap <F1> <Esc>
