@@ -1,0 +1,26 @@
+{
+  "libs": [
+    "browser",
+    "ecma5",
+    "ecma6",
+    "jquery"
+      ],
+
+    "loadEagerly": [
+      "src/**/*.js"
+      ],
+
+    "dontLoad": [
+      "node_modules"
+      ],
+
+    "plugins": {
+      "complete_strings": {},
+      "node": {},
+      "angular": {},
+      "requirejs": {},
+      "doc_comment": {
+        "fullDocs": true
+      }
+    }
+}
