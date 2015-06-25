@@ -85,13 +85,6 @@ let g:syntastic_check_on_wq = 0
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>
 
-"----------vim-javascript----------
-"syntax enable
-"set regexpengine=1
-"let g:jsx_ext_required = 0
-"let tern#is_show_argument_hints_enabled = 1
-"autocmd CompleteDone * pclose
-
 "------------SnipMate-------------
 " load JS Snippets
 "let g:snipMate = {}
