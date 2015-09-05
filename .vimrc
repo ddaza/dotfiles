@@ -78,52 +78,39 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_javascript_checkers = ['jsxhint']
+" ---- add this to after vim : ----v 
+"autocmd FileType javascript
+"      \if stridx(expand('%:p'), '/home/daniel/work/albert-marketplace/') == 0 |
+"      \let b:syntastic_checkers = ['eslint'] | endif
+"-----------------------------------
+"let g:syntastic_javascript_checkers = ['jshint']
 "let g:syntastic_javascript_jshint_exec = '/usr/bin/jshint'
-"let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_debug = 32
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>
 
-"------------SnipMate-------------
-" load JS Snippets
-"let g:snipMate = {}
-"let g:snipMate.scope_aliases = {}
-"let g:snipMate.scope_aliases['javascript'] ='javascript/javascript,javascript/javascript.node,javascript/javascript-requirejs'
+"----------vim-javascript----------
+"syntax enable
+"set regexpengine=1
+let g:jsx_ext_required = 0
+let tern#is_show_argument_hints_enabled = 1
+let tern_request_timeout = 0.8
+autocmd CompleteDone * pclose
 
-"--------YouCompleteMe--------
-
-"let g:ycm_use_ultisnips_completer = 1
-"let g:ycm_add_preview_to_completeopt = 0
-"let g:ycm_autoclose_preview_window_after_completion = 1 
-"let g:ycm_key_list_select_completion = ['<Down>']
-"let g:ycm_key_invoke_completion = '<Tab>'
-"let g:ycm_auto_trigger = 0
-
-"-------UltiSnips--------------
-
-"let g:UltiSnipsExpandTrigger="<c-j>"
-"let g:UltiSnipsJumpForwardTrigger="<c-j>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-""----------vim-javascript----------
-""syntax enable
-""set regexpengine=1
-"let g:jsx_ext_required = 0
-"let tern#is_show_argument_hints_enabled = 1
-"autocmd CompleteDone * pclose
-"
-""-----------supertab------------
-"let g:SuperTabDefaultCompletionType = "context"
-""let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-""let g:SuperTabContextDiscoverDiscovery =  ["&completefunc:<c-x><c-u>", \"&omnifunc:<c-x><c-o>"]
-"let g:SuperTabLongestEnhanced = 1
-"autocmd FileType *
-"      \if &omnifunc != '' |
-"      \call SuperTabChain(&omnifunc, "<c-p>") |
-""      \call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-"      \endif
-""---------------------------------
+"-----------supertab------------
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabCrMapping = 1
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
+let g:SuperTabContextDiscoverDiscovery =  ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+autocmd FileType *
+      \if &omnifunc != '' |
+      \call SuperTabChain(&omnifunc, "<c-p>") |
+"      \call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+      \endif
+"-------------------------------------
 
 set number
 colorscheme molokai
@@ -161,7 +148,7 @@ set expandtab "set tabs to spaces
 set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
 set list
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
-set guifont=Liberation\ Mono\ for\ Powerline\ 11
+set guifont=Liberation\ Mono\ for\ Powerline\ 10
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
 "set the pasing to be smarter?
@@ -175,6 +162,7 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.js :call DeleteTrailingWS()
 autocmd BufWrite *.scss :call DeleteTrailingWS()
+autocmd BufNewFile,BufRead *.scss set ft=scss.css
 "autocmd BufWrite *.py :call DeleteTrailingWS()
 "autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
