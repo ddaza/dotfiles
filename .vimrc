@@ -149,6 +149,7 @@ set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
 set list
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
 set guifont=Liberation\ Mono\ for\ Powerline\ 10
+set encoding=utf-8
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
 "set the pasing to be smarter?
@@ -185,6 +186,11 @@ inoremap (<CR>  (<CR>)<Esc>O
 inoremap ({<CR>  ({<CR>})<Esc>O
 
 inoremap [<CR>  [<CR>]<Esc>O
+
+" MacVim silence error sounds
+set noerrorbells 
+set novisualbell
+autocmd! GUIEnter * set vb t_vb=
 
 " Code Folding
 set foldmethod=indent
