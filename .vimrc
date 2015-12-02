@@ -86,6 +86,7 @@ let g:syntastic_check_on_wq = 0
 "let g:syntastic_javascript_checkers = ['jshint']
 "let g:syntastic_javascript_jshint_exec = '/usr/bin/jshint'
 let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_jshint_exec = '/Users/daniel/.nvm/versions/node/v5.0.0/bin/eslint'
 "let g:syntastic_debug = 32
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>
@@ -149,6 +150,7 @@ set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
 set list
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
 set guifont=Liberation\ Mono\ for\ Powerline\ 10
+"set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h11
 set encoding=utf-8
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar

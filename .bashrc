@@ -54,14 +54,31 @@ then
   alias df='colourify df'
 fi
 
-export PATH=${PATH}:~/android-sdk-linux/tools
-export PATH=${PATH}:~/android-sdk-linux/platform-tools
+# set VIM mode bash
+set -o vi
 
+#############  OSX ###############
+
+# OSX vim alias to use MacVim
+#alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+# OSX setting colors
+#export CLICOLOR=1
+#export LSCOLORS=ExFxBxDxCxegedabagacad
+#export GIT_EDITOR=nvim
+
+# OSX Homebrew completition
+#if [ -f `brew --prefix`/etc/bash_completion ]; then
+#    . `brew --prefix`/etc/bash_completion
+#fi
+
+
+############# END OSX ###############
 
 # If not running interactively, don't do anything
 case $- in
-  *i*) ;;
-*) return;;
+    *i*) ;;
+      *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -112,7 +129,6 @@ if [ -n "$force_color_prompt" ]; then
   fi
 fi
 
-
 # adds current working directory (pwd) in the title of xterm (renaming /home to ~).
 #export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/\~}\007"'
 
@@ -137,6 +153,17 @@ case "$TERM" in
   *)
     ;;
 esac
+
+########## OSX ###########
+# If this is an xterm set the title to user@host:dir
+#case "$TERM" in
+#  xterm*|rxvt*)
+#    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
+#    ;;
+#  *)
+#    ;;
+#esac
+########## END OSX ###########
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -179,6 +206,9 @@ fi
 
 # NVM
 #source ~/.nvm/nvm.sh
+# OSX NVM
+#export NVM_DIR="/Users/daniel/.nvm"
+
 #[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 export NVM_DIR="/home/daniel/.nvm"
