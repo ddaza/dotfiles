@@ -8,12 +8,6 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
   export TERM=xterm-256color
 fi
 
-# Show/Hide files in OSX
-#alias sfiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
-#alias hfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
-
-alias mkdir='mkdir -p'
-alias ls='ls -GFh'
 alias hfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 alias mkdir='mkdir -p'
 
@@ -21,7 +15,6 @@ alias mkdir='mkdir -p'
 alias ll='ls -alF'
 alias l='ls -CF'
 alias ls='ls -GFh'
-alias ll='ls -al'
 
 alias cls='tput reset'
 alias tmux='TERM=screen-256color-bce tmux'
@@ -57,28 +50,11 @@ fi
 # set VIM mode bash
 set -o vi
 
-#############  OSX ###############
-
-# OSX vim alias to use MacVim
-#alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-
-# OSX setting colors
-#export CLICOLOR=1
-#export LSCOLORS=ExFxBxDxCxegedabagacad
-#export GIT_EDITOR=nvim
-
-# OSX Homebrew completition
-#if [ -f `brew --prefix`/etc/bash_completion ]; then
-#    . `brew --prefix`/etc/bash_completion
-#fi
-
-
-############# END OSX ###############
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+*) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -154,17 +130,6 @@ case "$TERM" in
     ;;
 esac
 
-########## OSX ###########
-# If this is an xterm set the title to user@host:dir
-#case "$TERM" in
-#  xterm*|rxvt*)
-#    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
-#    ;;
-#  *)
-#    ;;
-#esac
-########## END OSX ###########
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -206,12 +171,10 @@ fi
 
 # NVM
 #source ~/.nvm/nvm.sh
-# OSX NVM
-#export NVM_DIR="/Users/daniel/.nvm"
 
 #[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-export NVM_DIR="/home/daniel/.nvm"
+export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #npm autocomplete
@@ -233,10 +196,10 @@ if type complete &>/dev/null; then
   _npm_completion () {
     local si="$IFS"
     IFS=$'\n' COMPREPLY=($(COMP_CWORD="$COMP_CWORD" \
-                           COMP_LINE="$COMP_LINE" \
-                           COMP_POINT="$COMP_POINT" \
-                           npm completion -- "${COMP_WORDS[@]}" \
-                           2>/dev/null)) || return $?
+      COMP_LINE="$COMP_LINE" \
+      COMP_POINT="$COMP_POINT" \
+      npm completion -- "${COMP_WORDS[@]}" \
+      2>/dev/null)) || return $?
     IFS="$si"
   }
   complete -o default -F _npm_completion npm
@@ -244,10 +207,10 @@ elif type compdef &>/dev/null; then
   _npm_completion() {
     local si=$IFS
     compadd -- $(COMP_CWORD=$((CURRENT-1)) \
-                 COMP_LINE=$BUFFER \
-                 COMP_POINT=0 \
-                 npm completion -- "${words[@]}" \
-                 2>/dev/null)
+      COMP_LINE=$BUFFER \
+      COMP_POINT=0 \
+      npm completion -- "${words[@]}" \
+      2>/dev/null)
     IFS=$si
   }
   compdef _npm_completion npm
@@ -261,10 +224,10 @@ elif type compctl &>/dev/null; then
     read -ln point
     si="$IFS"
     IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                       COMP_LINE="$line" \
-                       COMP_POINT="$point" \
-                       npm completion -- "${words[@]}" \
-                       2>/dev/null)) || return $?
+      COMP_LINE="$line" \
+      COMP_POINT="$point" \
+      npm completion -- "${words[@]}" \
+      2>/dev/null)) || return $?
     IFS="$si"
   }
   compctl -K _npm_completion npm
