@@ -23,6 +23,6 @@ git clone https://github.com/fweep/vim-tabber.git
 git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-surround.git
-git clone https://github.com/kien/ctrlp.vim.git
+git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/othree/html5.vim.git
 git clone https://github.com/ervandew/supertab.git

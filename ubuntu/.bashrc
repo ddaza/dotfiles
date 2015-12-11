@@ -8,7 +8,6 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
   export TERM=xterm-256color
 fi
 
-alias hfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 alias mkdir='mkdir -p'
 
 # some more ls aliases
@@ -22,7 +21,9 @@ alias vus='vagrant up && vagrant ssh'
 alias ack='ack-grep'
 alias dcp='docker-compose'
 alias wget='wget -e robots=off --no-check-certificate --referer="http://www.google.com" --user-agent="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" --header="Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5" --header="Accept-Language: en-us,en;q=0.5" --header="Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7" --header="Keep-Alive: 300"'
+
 # NEED GRC for this to work coulurify adds colors to unix commands
+####GRC STUFF
 export GRC=`which grc`
 if [ "$TERM" != dumb ] && [ -n "$GRC" ]
 then
@@ -47,9 +48,21 @@ then
   alias df='colourify df'
 fi
 
-# set VIM mode bash
-set -o vi
+### COLOR MAN PAGES
+man() {
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[01;31m") \
+    LESS_TERMCAP_md=$(printf "\e[01;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[01;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[01;32m") \
+      man "$@"
+}
 
+# Set VI keybindings in BASH
+set -o vi
 
 # If not running interactively, don't do anything
 case $- in
@@ -142,7 +155,6 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Add an "alert" alias for long running commands.  Use like so:
