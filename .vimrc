@@ -21,7 +21,7 @@ let g:ctrlp_show_hidden = 1
 
 "-------------AirLine-------------
 "let g:airline_theme='bubblegum'
-let g:airline_theme='badwolf'
+let g:airline_theme='kolor'
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
 "-----------Vim Tabber-------------
@@ -29,7 +29,8 @@ set tabline=%!tabber#TabLine()
 let g:tabber_wrap_when_shifting = 1
 
 nnoremap <silent> <Leader>tn       :tabnew<CR>
-nnoremap <silent> <Leader>te       :tabe .<CR>
+"nnoremap <silent> <Leader>te       :tabe .<CR>
+nnoremap <silent> <Leader>te       :tabe <C-R>=expand('%:p:h') . '/'<CR><CR>
 nnoremap <silent> <Leader>ts       :tablast<CR>
 nnoremap <silent> <Leader>tl       :TabberShiftLeft<CR>
 nnoremap <silent> <Leader>tr       :TabberShiftRight<CR>
@@ -97,7 +98,8 @@ nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>
 let g:jsx_ext_required = 0
 let tern#is_show_argument_hints_enabled = 1
 let tern_request_timeout = 0.8
-autocmd CompleteDone * pclose
+"autocmd CompleteDone * pclose
+set completeopt-=preview
 
 "-----------supertab------------
 let g:SuperTabDefaultCompletionType = "context"
@@ -149,7 +151,7 @@ set expandtab "set tabs to spaces
 set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
 set list
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
-set guifont=Liberation\ Mono\ for\ Powerline\ 10
+set guifont=Liberation\ Mono\ for\ Powerline\ 11
 "set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h11
 set encoding=utf-8
 set guioptions-=T " hide the toolbar
@@ -178,7 +180,9 @@ autocmd BufNewFile,BufRead *.scss set ft=scss.css
 set mouse=a
 
 "autochnangedir
-set autochdir " Change pwd to the current file opened
+"set autochdir " Change pwd to the current file opened
+" CDC = Change to Directory of Current file
+command CDC cd %:p:h
 
 "autocomplete Parenthesis
 inoremap {<CR>  {<CR>}<Esc>O
@@ -211,7 +215,22 @@ nmap <F2> :update<CR>
 vmap <F2> <Esc><F2>gv
 imap <F2> <c-o><F2>
 
+" Press Space to turn off highlighting and clear any message already displayed.
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+" search no jump
+nnoremap * *``
 "Disable F1 from popping up stuff
 map <F1> <Esc>
 vmap <F1> <Esc>
 imap <F1> <Esc>
+
+function! SetupEnvironment()
+  let l:path = expand('%:p')
+  if l:path =~ '/home/user/work/project1'
+    setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  elseif l:path =~ '/home/user/work/project2'
+    setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  endif
+endfunction
+
+autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
