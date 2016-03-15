@@ -79,7 +79,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" ---- add this to after vim : ----v 
+
+" ---- add this to after vim : ----
 "autocmd FileType javascript
 "      \if stridx(expand('%:p'), '/home/daniel/work/albert-marketplace/') == 0 |
 "      \let b:syntastic_checkers = ['eslint'] | endif
@@ -145,6 +146,7 @@ set confirm
 
 " use 2 or 4 spaces for tabs
 set tabstop=2 softtabstop=2 shiftwidth=2
+"set tabstop=4 softtabstop=4 shiftwidth=4
 set expandtab "set tabs to spaces
 
 " display indentation guides
@@ -194,7 +196,7 @@ inoremap ({<CR>  ({<CR>})<Esc>O
 inoremap [<CR>  [<CR>]<Esc>O
 
 " MacVim silence error sounds
-set noerrorbells 
+set noerrorbells
 set novisualbell
 autocmd! GUIEnter * set vb t_vb=
 
@@ -214,6 +216,9 @@ nnoremap Q <nop>
 nmap <F2> :update<CR>
 vmap <F2> <Esc><F2>gv
 imap <F2> <c-o><F2>
+
+" Select entire buffer <Visual>af
+vnoremap af :<C-U>silent! normal! ggVG<CR>
 
 " Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>

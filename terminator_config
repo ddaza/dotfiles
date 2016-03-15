@@ -1,16 +1,16 @@
 [global_config]
-  title_receive_bg_color = "#0005ff"
-  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  title_transmit_bg_color = "#03014a"
-  title_inactive_bg_color = "#7f7f7f"
   close_button_on_tab = False
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  handle_size = 1
+  title_inactive_bg_color = "#7f7f7f"
+  title_receive_bg_color = "#0005ff"
+  title_transmit_bg_color = "#03014a"
 [keybindings]
 [profiles]
   [[default]]
     scrollbar_position = hidden
-    background_image = /home/daniel/Pictures/wall/consolewallpaper.png
+    background_image = None 
     scrollback_lines = 1000
-    background_type = image
     use_system_font = False
     foreground_color = "#ffffff"
     show_titlebar = False
