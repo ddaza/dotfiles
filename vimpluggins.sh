@@ -4,8 +4,10 @@ cd ~/.vim/bundle
 
 # --- javascript ---
 git clone https://github.com/ternjs/tern_for_vim.git
+git clone http://github.com/vim-airline/vim-airline-themes
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/jelera/vim-javascript-syntax.git
+git clone https://github.com/FuzzOli87/vim-js-indent.git
 git clone https://github.com/mxw/vim-jsx.git
 # --- syntastic ---
 git clone https://github.com/scrooloose/syntastic.git
@@ -19,6 +21,7 @@ git clone https://github.com/bling/vim-airline.git
 git clone https://github.com/fweep/vim-tabber.git
 # --- misc ---
 git clone https://github.com/mileszs/ack.vim.git
+git clone https://github.com/flazz/vim-colorschemes.git
 git clone https://github.com/easymotion/vim-easymotion.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
