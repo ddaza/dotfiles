@@ -11,6 +11,7 @@ fi
 alias mkdir='mkdir -p'
 
 # some more ls aliases
+alias teeclip='tee /dev/tty | xclip -sel clip'
 alias ll='ls -alF'
 alias l='ls -CF'
 alias ls='ls -GFh'
@@ -61,8 +62,10 @@ man() {
       man "$@"
 }
 
-# Set VI keybindings in BASH
-set -o vi
+# Set VI keybindings in BASH -- UPDATE: Check ~/.inputrc
+#set -o vi
+# Ignore Ctrl-d close terminal
+#set -o ignoreeof
 
 # If not running interactively, don't do anything
 case $- in

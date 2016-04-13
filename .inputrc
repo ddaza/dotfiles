@@ -1,1 +1,8 @@
+# Use Vi, not Emacs, style editing
+set editing-mode vi
+
+# Show a + for insert mode or : for ex mode
 set show-mode-in-prompt on
+
+# Show all completions as soon as I press tab, even if there's more than one
+set show-all-if-ambiguous on
