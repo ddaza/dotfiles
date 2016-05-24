@@ -18,12 +18,21 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = 'node_modules\|git\|dist'
 let g:ctrlp_show_hidden = 1
+" ------ hide Swap files from NetRw----
+
+let g:netrw_list_hide= '.*\.swp$'
+let g:netrw_hide = 1
 
 "-------------AirLine-------------
 "let g:airline_theme='bubblegum'
 let g:airline_theme='kolor'
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
+
+"-----------Vim Spellcheck----------
+nnoremap <silent> <Leader>ll        :setlocal spell spelllang=en_us<CR>
+nnoremap <silent> <Leader>ln        :set nospell<CR>
+
 "-----------Vim Tabber-------------
 set tabline=%!tabber#TabLine()
 let g:tabber_wrap_when_shifting = 1
@@ -52,23 +61,45 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Bi-directional find motion
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
-nmap s <Plug>(easymotion-s)
+"nmap s <Plug>(easymotion-s)
 " or
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-s2)
+"nmap s <Plug>(easymotion-s2)
+" Gif config
+"nmap s <Plug>(easymotion-s2)
+"nmap t <Plug>(easymotion-t2)
 
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 
 " JK motions: Line motions
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+"map <Leader>l <Plug>(easymotion-lineforward)
+"map <Leader>j <Plug>(easymotion-j)
+"map <Leader>k <Plug>(easymotion-k)
+"map <Leader>h <Plug>(easymotion-linebackward)
+
+"" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+"map  n <Plug>(easymotion-next)
+"map  N <Plug>(easymotion-prev)
 
 " Gif config
 map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
 "-------------Syntastic-----------------
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -101,6 +132,11 @@ let tern#is_show_argument_hints_enabled = 1
 let tern_request_timeout = 0.8
 "autocmd CompleteDone * pclose
 set completeopt-=preview
+"------ Preeeeety icons ---------
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_arrow_function = "⇒"
 
 "-----------supertab------------
 let g:SuperTabDefaultCompletionType = "context"
@@ -192,7 +228,7 @@ inoremap {{     {{}}<Left><Left>
 
 inoremap (<CR>  (<CR>)<Esc>O
 inoremap ({<CR>  ({<CR>})<Esc>O
-
+inoremap {/*<CR>  {/*<CR>*/}<Esc>O
 inoremap [<CR>  [<CR>]<Esc>O
 
 " MacVim silence error sounds
