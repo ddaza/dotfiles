@@ -2,51 +2,17 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-#custom adds
+# Less Colors for Man Pages
+#export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
+#export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
+#export LESS_TERMCAP_me=$'\e[0m'           # end mode
+#export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+#export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
+#export LESS_TERMCAP_ue=$'\e[0m'           # end underline
+#export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
   export TERM=xterm-256color
-fi
-
-alias mkdir='mkdir -p'
-
-# some more ls aliases
-alias teeclip='tee /dev/tty | xclip -sel clip'
-alias ll='ls -alF'
-alias l='ls -CF'
-alias ls='ls -GFh'
-
-alias cls='tput reset'
-alias tmux='TERM=screen-256color-bce tmux'
-alias vus='vagrant up && vagrant ssh'
-alias ack='ack-grep'
-alias dcp='docker-compose'
-alias wget='wget -e robots=off --no-check-certificate --referer="http://www.google.com" --user-agent="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" --header="Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5" --header="Accept-Language: en-us,en;q=0.5" --header="Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7" --header="Keep-Alive: 300"'
-
-# NEED GRC for this to work coulurify adds colors to unix commands
-####GRC STUFF
-export GRC=`which grc`
-if [ "$TERM" != dumb ] && [ -n "$GRC" ]
-then
-  alias colourify="$GRC -es --colour=auto"
-  alias configure='colourify ./configure'
-  alias diff='colourify diff'
-  alias make='colourify make'
-  alias gcc='colourify gcc'
-  alias g++='colourify g++'
-  alias as='colourify as'
-  alias gas='colourify gas'
-  alias ld='colourify ld'
-  alias netstat='colourify netstat'
-  alias ping='colourify ping'
-  alias traceroute='colourify /usr/sbin/traceroute'
-  alias head='colourify head'
-  alias tail='colourify tail'
-  alias dig='colourify dig'
-  alias mount='colourify mount'
-  alias ps='colourify ps'
-  alias mtr='colourify mtr'
-  alias df='colourify df'
 fi
 
 ### COLOR MAN PAGES
@@ -62,10 +28,6 @@ man() {
       man "$@"
 }
 
-# Set VI keybindings in BASH -- UPDATE: Check ~/.inputrc
-#set -o vi
-# Ignore Ctrl-d close terminal
-#set -o ignoreeof
 
 # If not running interactively, don't do anything
 case $- in
@@ -84,6 +46,8 @@ shopt -s histappend
 HISTSIZE=
 HISTFILESIZE=
 HISTTIMEFORMAT="[%F %T] "
+HISTIGNORE="ls:exit:history:[bf]g:jobs"
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
