@@ -278,4 +278,4 @@ imap <F1> <Esc>
 "  endif
 "endfunction
 
-autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
+"autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
