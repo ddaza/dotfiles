@@ -124,6 +124,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>
 
+"----------vim-JSDoc----------
+nmap <silent> <C-l> <Plug>(jsdoc)
+let g:jsdoc_enable_es6 = 1
 "----------vim-javascript----------
 "syntax enable
 "set regexpengine=1
@@ -150,8 +153,15 @@ autocmd FileType *
       \call SuperTabChain(&omnifunc, "<c-p>") |
 "      \call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
       \endif
-"-------------------------------------
 
+"-----------SnipMate------------
+let g:snipMate = {}
+let g:snipMate.snippet_version = 1
+
+" load JS Snippets
+"let g:snipMate.scope_aliases = {}
+"let g:snipMate.scope_aliases['javascript'] ='javascript/javascript,javascript/javascript.node,javascript/javascript-requirejs'
+"--------------------------------
 set number
 colorscheme molokai
 "colorscheme koehler
@@ -186,12 +196,12 @@ set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab "set tabs to spaces
 
 " display indentation guides
-set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
 set list
+set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
+set encoding=utf-8
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
 set guifont=Liberation\ Mono\ for\ Powerline\ 11
 "set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h11
-set encoding=utf-8
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
 "set the pasing to be smarter?
@@ -204,16 +214,10 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 autocmd BufWrite *.js :call DeleteTrailingWS()
+autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.scss :call DeleteTrailingWS()
 autocmd BufNewFile,BufRead *.scss set ft=scss.css
-"autocmd BufWrite *.py :call DeleteTrailingWS()
-"autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
-" load JS Snippets
-"let g:snipMate = {}
-"let g:snipMate.scope_aliases = {}
-"let g:snipMate.scope_aliases['javascript'] ='javascript/javascript,javascript/javascript.node,javascript/javascript-requirejs'
-""
 " mouse scrolling
 set mouse=a
 
@@ -265,13 +269,13 @@ map <F1> <Esc>
 vmap <F1> <Esc>
 imap <F1> <Esc>
 
-function! SetupEnvironment()
-  let l:path = expand('%:p')
-  if l:path =~ '/home/user/work/project1'
-    setlocal tabstop=4 softtabstop=4 shiftwidth=4
-  elseif l:path =~ '/home/user/work/project2'
-    setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  endif
-endfunction
+"function! SetupEnvironment()
+"  let l:path = expand('%:p')
+"  if l:path =~ '/home/user/work/project1'
+"    setlocal tabstop=4 softtabstop=4 shiftwidth=4
+"  elseif l:path =~ '/home/user/work/project2'
+"    setlocal tabstop=2 softtabstop=2 shiftwidth=2
+"  endif
+"endfunction
 
 autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
