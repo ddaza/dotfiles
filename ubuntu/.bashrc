@@ -19,20 +19,22 @@ fi
 man() {
   env \
     LESS_TERMCAP_mb=$(printf "\e[01;31m") \
-    LESS_TERMCAP_md=$(printf "\e[01;31m") \
+    LESS_TERMCAP_md=$(printf "\e[01;38;5;74m") \
     LESS_TERMCAP_me=$(printf "\e[0m") \
     LESS_TERMCAP_se=$(printf "\e[0m") \
     LESS_TERMCAP_so=$(printf "\e[01;44;33m") \
     LESS_TERMCAP_ue=$(printf "\e[0m") \
     LESS_TERMCAP_us=$(printf "\e[01;32m") \
-      man "$@"
+    man "$@"
 }
 
+## set VIM mode bash
+set -o vi
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+  *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -46,7 +48,7 @@ shopt -s histappend
 HISTSIZE=
 HISTFILESIZE=
 HISTTIMEFORMAT="[%F %T] "
-HISTIGNORE="ls:exit:history:[bf]g:jobs"
+HISTIGNORE="ls:ll:exit:history:jobs:cls:clear"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -66,7 +68,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-  xterm-color) color_prompt=yes;;
+  xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
