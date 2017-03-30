@@ -176,12 +176,15 @@ set showmatch "show matching braces
 set hlsearch
 set laststatus=2
 set foldenable "add foldable code?
-set clipboard=unnamedplus "set clipboard to work xterm
+"set clipboard=unnamedplus "set clipboard to work xterm
+" this seems to be working with TMUX
+set clipboard^=unnamed,unnamedplus
 set background=dark
 " search smartly case sensitive only when required
 set ignorecase
 set smartcase
 set t_Co=256 "set 256 colors for airline
+set term=screen-256color
 
 "way better option to handle moving away from files
 set confirm
@@ -200,8 +203,8 @@ set list
 set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
 set encoding=utf-8
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
-set guifont=Liberation\ Mono\ for\ Powerline\ 11
-"set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h11
+"set guifont=Liberation\ Mono\ for\ Powerline\ 11
+set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h11
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
 "set the pasing to be smarter?
