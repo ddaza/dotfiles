@@ -93,6 +93,9 @@ set mouse=a
 " CDC = Change to Directory of Current file
 command CDC cd %:p:h
 
+" Show current file and copy to clipboard
+nnoremap <silent> <Leader>f       :let @+ = expand("%:p")<CR>:echo @%<CR>
+
 " MacVim silence error sounds
 set noerrorbells
 set novisualbell
@@ -106,9 +109,6 @@ set foldlevel=1
 
 "cursorline to see where are you
 set cursorline
-
-" Custom keybindings
-runtime custom/keybindings.vim
 
 " Select entire buffer <Visual>af
 vnoremap af :<C-U>silent! normal! ggVG<CR>
