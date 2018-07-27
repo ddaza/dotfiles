@@ -19,5 +19,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_javascript_jshint_exec = '/Users/daniel/.nvm/versions/node/v5.0.0/bin/eslint'
 "let g:syntastic_debug = 32
+
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>

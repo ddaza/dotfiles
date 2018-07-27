@@ -40,9 +40,12 @@ set showmatch "show matching braces
 set hlsearch
 set laststatus=2
 set foldenable "add foldable code?
+" clipboard
 "set clipboard=unnamedplus "set clipboard to work xterm
 " this seems to be working with TMUX
-set clipboard^=unnamed,unnamedplus
+"set clipboard^=unnamed,unnamedplus
+
+" background
 set background=dark
 " search smartly case sensitive only when required
 set ignorecase
@@ -80,9 +83,10 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-autocmd BufWrite *.js :call DeleteTrailingWS()
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.scss :call DeleteTrailingWS()
+" ---- editorconfig fixed this ----
+" autocmd BufWrite *.js :call DeleteTrailingWS()
+" autocmd BufWrite *.py :call DeleteTrailingWS()
+" autocmd BufWrite *.scss :call DeleteTrailingWS()
 autocmd BufNewFile,BufRead *.scss set ft=scss.css
 
 " mouse scrolling
@@ -91,7 +95,9 @@ set mouse=a
 "autochnangedir
 "set autochdir " Change pwd to the current file opened
 " CDC = Change to Directory of Current file
-command CDC cd %:p:h
+if !exists(":CDC")
+  command CDC cd %:p:h
+endif
 
 " Show current file and copy to clipboard
 nnoremap <silent> <Leader>f       :let @+ = expand("%:p")<CR>:echo @%<CR>
