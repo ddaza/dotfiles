@@ -1,0 +1,9 @@
+# Add the args to the geometry MPV
+mpv => {
+  arg => "--really-quiet --ontop --geometry=25%x25%+100%+100% --alpha --title=*TITLE* --no-ytdl",
+      audio => "--audio-file=*AUDIO*",
+      cmd => "/usr/local/bin/mpv",
+      fs => "--fullscreen",
+      novideo => "--no-video",
+      srt => "--sub-file=*SUB*",
+},
