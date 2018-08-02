@@ -19,7 +19,7 @@ fi
 # eval $(thefuck --alias)
 
 ## Remove stty stuff
-stty -ixon
+[[ $- == *i* ]] && stty -ixon
 
 ### COLOR MAN PAGES
 man() {
