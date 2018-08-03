@@ -56,6 +56,8 @@ set term=screen-256color
 "way better option to handle moving away from files
 set confirm
 
+set diffopt+=vertical
+
 " 80 chars column
 "highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
@@ -74,6 +76,7 @@ set guifont=Liberation\ Mono\ for\ Powerline\ 11
 "set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h11
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
+set guioptions-=L " hide scrollbar Macvim
 "set the pasing to be smarter?
 "set paste
 
@@ -100,7 +103,20 @@ if !exists(":CDC")
 endif
 
 " Show current file and copy to clipboard
-nnoremap <silent> <Leader>f       :let @+ = expand("%:p")<CR>:echo @%<CR>
+" relative path
+nnoremap <silent> <Leader>fr :let @+ = expand("%")<CR>:echo @+<CR>
+" full path
+nnoremap <silent> <Leader>fp :let @+ = expand("%:p")<CR>:echo @+<CR>
+" just filename
+nnoremap <silent> <Leader>ff :let @+ = expand("%:t")<CR>:echo @+<CR>
+" reload file
+nnoremap <silent> <Leader>ee :e!<CR>
+" write file
+nnoremap <silent> <Leader>wr :update<CR>
+
+" Add Ack handling
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 " MacVim silence error sounds
 set noerrorbells
