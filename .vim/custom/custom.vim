@@ -72,8 +72,8 @@ set list
 set listchars=tab:❘·,trail:·,nbsp:·,precedes:«,extends:»,eol:↲
 set encoding=utf-8
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
-set guifont=Liberation\ Mono\ for\ Powerline\ 11
-"set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h11
+"set guifont=Liberation\ Mono\ for\ Powerline\ 11
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
 set guioptions-=L " hide scrollbar Macvim
@@ -117,6 +117,10 @@ nnoremap <silent> <Leader>wr :update<CR>
 " Add Ack handling
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+" use ag instead of ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " MacVim silence error sounds
 set noerrorbells

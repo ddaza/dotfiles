@@ -4,6 +4,8 @@ let g:tabber_wrap_when_shifting = 1
 
 nnoremap <silent> <Leader>tn       :tabnew<CR>
 "nnoremap <silent> <Leader>te       :tabe .<CR>
+"open last open file
+nnoremap <silent> <Leader>to       :tabe #<CR> 
 nnoremap <silent> <Leader>te       :tabe <C-R>=expand('%:p:h') . '/'<CR><CR>
 nnoremap <silent> <Leader>ts       :tablast<CR>
 "nnoremap <silent> <Leader>tl       :TabberShiftLeft<CR>

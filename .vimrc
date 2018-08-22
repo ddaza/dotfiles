@@ -16,4 +16,12 @@ runtime custom/syntastic.vim
 runtime custom/javascript.vim
 runtime custom/supertab.vim
 runtime custom/snipmate.vim
+runtime custom/emmet.vim
+runtime custom/nerdtree.vim
 "--------------------------------
+
+" Add this in the gits config
+let g:github_enterprise_urls = ['']
+" watch for webpack
+"set backupcopy=yes
+"set noswapfile
