@@ -1,0 +1,8 @@
+[core]
+	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+	ignorecase = false 
+[merge]
+  conflictstyle = merge
+	tool = mvim 
+[mergetool "mvim"]
+	cmd = mvim "+Gvdiff" $MERGED
