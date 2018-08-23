@@ -11,3 +11,8 @@ alias docker-service-stop='sudo service docker stop'
 alias history-sync='history -a; history -c; history -r'
 alias net-restart='sudo service network-manager restart'
 alias alias-edit='vim ~/.bash_it/aliases/custom.aliases.bash'
+# Mac Only
+# alias sfiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
+# alias hfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+# alias chrome-insecure="open -na /Applications/Google\ Chrome.app --args --disable-web-security --ignore-certificate-errors --allow-running-insecure-content --user-data-dir"
+# alias canary-insecure="open -na /Applications/Google\ Chrome\ Canary.app --args --disable-web-security --ignore-certificate-errors --allow-running-insecure-content --user-data-dir"
