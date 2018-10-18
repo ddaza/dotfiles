@@ -9,6 +9,7 @@ git clone https://github.com/editorconfig/editorconfig-vim.git
 git clone https://github.com/mattn/emmet-vim.git
 git clone https://github.com/othree/html5.vim.git
 git clone https://github.com/davidhalter/jedi-vim.git
+git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/ervandew/supertab.git
 git clone https://github.com/scrooloose/syntastic.git
 git clone https://github.com/ternjs/tern_for_vim.git
@@ -23,6 +24,7 @@ git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/heavenshell/vim-jsdoc.git
 git clone https://github.com/mxw/vim-jsx.git
 git clone https://github.com/tpope/vim-rhubarb
+git clone https://github.com/jremmen/vim-ripgrep.git
 git clone https://github.com/garbas/vim-snipmate.git
 git clone https://github.com/honza/vim-snippets.git
 git clone https://github.com/tpope/vim-surround.git

@@ -11,6 +11,7 @@ runtime custom/spellcheck.vim
 runtime custom/vimtabs.vim
 runtime custom/netrw.vim
 runtime custom/controlp.vim
+runtime custom/tags.vim
 runtime custom/easymotion.vim
 runtime custom/syntastic.vim
 runtime custom/javascript.vim
