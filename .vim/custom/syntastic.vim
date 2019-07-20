@@ -3,6 +3,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+set laststatus=0
+set noshowcmd
+
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
@@ -13,10 +17,12 @@ let g:syntastic_check_on_wq = 0
 "autocmd FileType javascript
 "      \if stridx(expand('%:p'), '/home/daniel/work/albert-marketplace/') == 0 |
 "      \let b:syntastic_checkers = ['eslint'] | endif
+"      \let g:syntastic_javascript_eslint_exec = '/Users/blalala/projects/project/node_modules/.bin/eslint_d' | endif
 "-----------------------------------
 "let g:syntastic_javascript_checkers = ['jshint']
 "let g:syntastic_javascript_jshint_exec = '/usr/bin/jshint'
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['eslint', 'tsuquyomi']
 " Faster eslint
 "let g:syntastic_javascript_eslint_exec = 'eslint_d'
 "let g:syntastic_javascript_jshint_exec = '/Users/daniel/.nvm/versions/node/v5.0.0/bin/eslint'

@@ -16,6 +16,9 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 
+" Make paste work in macvim
+autocmd VimEnter,BufEnter * :EMCommandLineNoreMap \"\+gP <C-r>+
+
 " JK motions: Line motions
 "map <Leader>l <Plug>(easymotion-lineforward)
 "map <Leader>j <Plug>(easymotion-j)

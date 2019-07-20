@@ -1,2 +1,3 @@
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,js,javascript.jsx EmmetInstall
+let g:user_emmet_mode='n'
+autocmd FileType html,css,js,javascript.jsx,typescript EmmetInstall
