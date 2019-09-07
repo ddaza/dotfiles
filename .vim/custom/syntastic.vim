@@ -22,9 +22,10 @@ let g:syntastic_check_on_wq = 0
 "let g:syntastic_javascript_checkers = ['jshint']
 "let g:syntastic_javascript_jshint_exec = '/usr/bin/jshint'
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_typescript_checkers = ['eslint', 'tsuquyomi']
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'eslint']
 " Faster eslint
-"let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:syntastic_typescript_eslint_exec = 'eslint_d'
 "let g:syntastic_javascript_jshint_exec = '/Users/daniel/.nvm/versions/node/v5.0.0/bin/eslint'
 "let g:syntastic_debug = 32
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
