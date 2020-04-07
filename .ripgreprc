@@ -1,0 +1,10 @@
+--smart-case
+
+--type-add
+specjs:*.spec.js
+
+--type-add
+testjs:*.test.{js,ts,tsx}
+
+--type-add
+typescript:*.{ts,tsx}

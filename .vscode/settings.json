@@ -1,0 +1,74 @@
+{
+  "editor.fontFamily": "Dank Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 0,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "files.autoSave": "onFocusChange",
+  "vim.visualstar": true,
+  "jest.enableSnapshotPreviews": false,
+  "jest.enableSnapshotUpdateMessages": false,
+  "jest.runAllTestsFirst": false,
+  "zenMode.hideActivityBar": false,
+  "editor.fontWeight": "600",
+  "jest.autoEnable": false,
+  "workbench.activityBar.visible": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineHeight": 15,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.wordWrap": "on",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.quiet": true,
+  "files.enableTrash": false,
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "explorer.autoReveal": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "t", "r"],
+      "commands": [":tabmove+"]
+    },
+    {
+      "before": ["<leader>", "t", "l"],
+      "commands": [":tabmove-"]
+    },
+    {
+      "before": ["<leader>", "e", "e"],
+      "commands": [":e!"]
+    },
+    {
+      "before": ["<leader>", "f", "r"],
+      "commands": ["copyRelativeFilePath"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["editor.action.formatDocument"]
+    }
+  ],
+  "workbench.colorTheme": "Dracula",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.minimap.maxColumn": 60,
+  "editor.minimap.size": "fill",
+  "editor.minimap.renderCharacters": false,
+  "editor.fontSize": 14
+}

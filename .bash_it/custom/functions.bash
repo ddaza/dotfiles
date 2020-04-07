@@ -1,6 +1,11 @@
+function fvim {
+  nvim $(fd --type f | fzf)
+}
+
 function search-replace() {
   if [ -z "$1" ] && [ -z "$2" ]; then
-    echo "Please pass some argumenst"
+    echo "Please pass some arguments:"
+    echo "\$ search-replace <SEARCH_STRING> <REPLACE_STRING>"
     return
   fi
 

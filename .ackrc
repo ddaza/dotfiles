@@ -9,6 +9,13 @@
 
 #make sure ack knows how to search common filetypes used in node.js projects
 --ignore-dir=node_modules
+--ignore-dir=.dll
+--ignore-dir=.tmp
+--ignore-dir=dist
+--ignore-dir=.cache
+## ignore snapshots
+--ignore-file=ext:snap
+
 ## ignore build folder
 ##--ignore-dir=build
 ##--ignore-dir=coverage
@@ -16,6 +23,7 @@
 --type-set=jade:ext:jade
 --type-set=feature:ext:feature
 --type-set=json:ext:json
+--type-set=tsx:ext:tsx
 
 #--pager=less -FRSX
 --pager=less -ix4SRFX

@@ -24,9 +24,29 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'eslint']
 " Faster eslint
+"let g:syntastic_javascript_eslint_exec = '/projects/reacConf/node_modules/.bin/eslint_d'
+"
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:syntastic_javascript_eslint_args = ['--fix']
 let g:syntastic_typescript_eslint_exec = 'eslint_d'
+let g:syntastic_typescript_eslint_args = ['--fix']
 "let g:syntastic_javascript_jshint_exec = '/Users/daniel/.nvm/versions/node/v5.0.0/bin/eslint'
 "let g:syntastic_debug = 32
 nnoremap <silent> <Leader>ew    :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>ww    :SyntasticCheck<CR>
+
+"Refresh buffer after fix
+function! SyntasticCheckHook(errors)
+  checktime
+endfunction
+
+"function! SetupEnvironment()
+"  let l:path = expand('%:p')
+"  if l:path =~ '/Users/z0031ww/projects/AdaptiveUI'
+"    setlocal tabstop=4 softtabstop=4 shiftwidth=4
+"  elseif l:path =~ '/home/user/work/project2'
+"    setlocal tabstop=2 softtabstop=2 shiftwidth=2
+"  endif
+"endfunction
+"
+"autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
