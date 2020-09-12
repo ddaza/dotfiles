@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+  export TERM=xterm-256color
+fi
+
 # Less Colors for Man Pages
 #export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
 #export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
@@ -10,13 +14,6 @@
 #export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
 #export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 #export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
-
-if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-  export TERM=xterm-256color
-fi
-
-## Fuck CMD
-# eval $(thefuck --alias)
 
 ## Remove stty stuff
 [[ $- == *i* ]] && stty -ixon
@@ -34,8 +31,8 @@ man() {
     man "$@"
 }
 
-## set VIM mode bash
-set -o vi
+# set VIM mode bash
+# set -o vi
 
 # If not running interactively, don't do anything
 case $- in
@@ -59,6 +56,9 @@ HISTIGNORE="ls:ll:exit:history:jobs:cls:clear"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# Set default editor
+export EDITOR="nvim"
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -162,10 +162,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Set default editor
-export EDITOR="vim"
-
-
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

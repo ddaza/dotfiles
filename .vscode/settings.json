@@ -60,6 +60,7 @@
     {
       "before": ["<leader>", "p"],
       "commands": ["editor.action.formatDocument"]
+<<<<<<< HEAD
     }
   ],
   "workbench.colorTheme": "Dracula",
@@ -71,4 +72,49 @@
   "editor.minimap.size": "fill",
   "editor.minimap.renderCharacters": false,
   "editor.fontSize": 14
+=======
+    },
+    {
+      "before": ["<leader>", "z"],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "2",
+        "s"
+      ]
+    }
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "AllAutocomplete.cycleOpenDocumentsOnLaunch": true,
+  "AllAutocomplete.updateOnlyOnSave": true,
+  "clock.alignment": "Right",
+  "clock.format": "hh:MM TT",
+  "clock.iconName": "watch",
+  "clock.updateInterval": 5000,
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 60,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.size": "fill",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+  "vim.easymotionMarkerBackgroundColor": "yellow",
+  "vim.easymotionMarkerFontFamily": "Hack",
+  "vim.easymotionMarkerFontSize": "15",
+  "vim.easymotionMarkerFontWeight": "bold",
+  "vim.easymotionMarkerForegroundColorOneChar": "black",
+  "vim.easymotionMarkerForegroundColorTwoChar": "black",
+  "vim.easymotionMarkerHeight": 16,
+  "yaclock.showAmPm": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "material-icon-theme.folders.color": "#ccd1f9",
+  "workbench.fontAliasing": "antialiased",
+  "editor.fontWeight": "600",
+  "workbench.sideBar.location": "left",
+  "workbench.iconTheme": "material-icon-theme",
+>>>>>>> a8e278e0a86825ca1de9b578f71c580788eec277
 }

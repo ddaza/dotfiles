@@ -1,0 +1,13 @@
+[core]
+  editor = nvim 
+  ignorecase = false 
+	excludesfile = /Users/[USER]/.gitignore
+[diff]
+  mnemonicprefix = true
+[merge]
+  conflictstyle = merge
+  tool = fugitive
+[mergetool "fugitive"]
+  cmd = mvim -f -c \"Gdiff\" \"$MERGED\"
+[hub]
+	host = enterprise.site.com

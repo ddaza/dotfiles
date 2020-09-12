@@ -1,0 +1,182 @@
+"*":
+  "atom-ctags":
+    extraTagFiles: "tags"
+  "atom-material-ui":
+    colors:
+      abaseColor: "#0676dd"
+      genAccent: true
+    fonts:
+      fontSize: 14
+    tabs:
+      compactTabs: true
+      stretchedTabs: true
+    ui:
+      panelShadows: true
+      useAnimations: false
+  "atom-notes": {}
+  "atom-typescript":
+    allowJS: true
+    autocompleteParens: true
+    preferBuiltinSigHelp: true
+    sigHelpPosition: "bottom"
+    tooltipPosition: "top"
+    tsserverInstancePerTsconfig: true
+  "autocomplete-ctags": {}
+  "autocomplete-modules":
+    webpack: true
+  "autocomplete-plus":
+    confirmCompletion: "enter"
+    useCoreMovementCommands: false
+  autosave:
+    enabled: true
+  clock:
+    am_pm_suffix: true
+    format: false
+    icon: true
+  core:
+    disabledPackages: [
+      "linter-stylelint"
+      "filesize"
+      "antialiased"
+      "open-in-browsers"
+      "github"
+      "minimap"
+      "time-notes"
+    ]
+    packagesWithKeymapsDisabled: [
+      "atom-ctags"
+      "atom-typescript"
+      "symbols-view"
+      "atom-quokka"
+      "tomatimer"
+    ]
+    packagesWithSnippetsDisabled: []
+    telemetryConsent: "no"
+    themes: [
+      "isotope-ui"
+      "dracula-syntax"
+    ]
+  editor:
+    fontFamily: "Dank Mono, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    invisibles:
+      eol: "↵"
+    lineHeight: 1.3
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrap: true
+  "file-watcher":
+    promptWhenChange: true
+  "find-and-replace":
+    enablePCRE2: true
+    useRipgrep: true
+  fonts:
+    fontFamily: "Hack"
+  "fuzzy-finder":
+    preserveLastSearch: true
+    scoringSystem: "alternate"
+    searchAllPanes: true
+    useRipGrep: true
+  "isotope-ui":
+    customBackgroundColorPicker: "#353847"
+    fontFamily: "Ubuntu"
+    lowContrastTooltip: true
+    minimalMode: true
+  linter: {}
+  "linter-eslint":
+    autofix:
+      fixOnSave: true
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.flow"
+      "source.babel"
+      "source.js-semantic"
+      "source.ts"
+      "source.tsx"
+    ]
+  "linter-ui-default":
+    alwaysTakeMinimumSpace: true
+    panelHeight: 148
+    showPanel: true
+  minimap:
+    charHeight: 1
+    displayPluginsControls: false
+    ignoreWhitespacesInTokens: true
+    plugins:
+      "minimap-autohider": true
+      "minimap-autohiderDecorationsZIndex": 0
+      "minimap-hide": true
+      "minimap-hideDecorationsZIndex": 0
+  "nv-dark-ui":
+    fontSize: 10
+  "one-dark-ui":
+    fontSize: 10
+    hideDockButtons: true
+    tabSizing: "Maximum"
+  "open-in-browsers":
+    BrowserPlus: false
+    IE: false
+    Opera: false
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+      showInStatusBar: true
+    prettierEslintOptions:
+      prettierLast: true
+  "seti-syntax":
+    themeColor: "Green"
+  "seti-ui":
+    compactView: true
+    disableAnimations: true
+    themeColor: "Green"
+  tabs:
+    enableVcsColoring: true
+  "tidy-tabs":
+    runOnSave: true
+  "time-notes":
+    enabled: false
+  "todo-show":
+    autoRefresh: false
+    findTheseTodos: [
+      "FIXME"
+      "COMBAK"
+      "TEMP"
+    ]
+    ignoreThesePaths: [
+      "node_modules"
+      "vendor"
+      "bower_components"
+      "*.pdf"
+      "dist"
+      "temp"
+      "dll"
+    ]
+    showInTable: [
+      "Type"
+      "Text"
+      "Path"
+    ]
+    sortAscending: false
+    sortBy: "Type"
+    statusBarIndicator: true
+  "tree-view":
+    alwaysOpenExisting: true
+  "tree-view-sort":
+    type: 0
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  "vim-mode-plus":
+    highlightSearch: true
+    sequentialPaste: true
+    showHoverSearchCounter: true
+    smoothScrollOnFullScrollMotionDuration: 0
+    smoothScrollOnHalfScrollMotion: true
+    smoothScrollOnHalfScrollMotionDuration: 0
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForFind: true
+    useSmartcaseForSearch: true
+    useSmartcaseForSearchCurrentWord: true
+  welcome:
+    showOnStartup: false
