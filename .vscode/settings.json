@@ -60,19 +60,6 @@
     {
       "before": ["<leader>", "p"],
       "commands": ["editor.action.formatDocument"]
-<<<<<<< HEAD
-    }
-  ],
-  "workbench.colorTheme": "Dracula",
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.minimap.maxColumn": 60,
-  "editor.minimap.size": "fill",
-  "editor.minimap.renderCharacters": false,
-  "editor.fontSize": 14
-=======
     },
     {
       "before": ["<leader>", "z"],
@@ -116,5 +103,4 @@
   "editor.fontWeight": "600",
   "workbench.sideBar.location": "left",
   "workbench.iconTheme": "material-icon-theme",
->>>>>>> a8e278e0a86825ca1de9b578f71c580788eec277
 }

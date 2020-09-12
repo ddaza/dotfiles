@@ -1,13 +1,5 @@
 {
   "recommendations": [
-<<<<<<< HEAD
-    "alexnho.a-touch-of-lilac-theme",
-    "andys8.jest-snippets",
-    "Atishay-Jain.All-Autocomplete",
-    "chiragpat.tomorrow-and-tomorrow-night-operator-mono-theme",
-    "christian-kohler.npm-intellisense",
-    "christian-kohler.path-intellisense",
-=======
     "Atishay-Jain.All-Autocomplete",
     "EditorConfig.EditorConfig",
     "Gruntfuggly.activitusbar",
@@ -25,25 +17,11 @@
     "christian-kohler.npm-intellisense",
     "christian-kohler.path-intellisense",
     "chriswheeldon.exuberant-ctags",
->>>>>>> a8e278e0a86825ca1de9b578f71c580788eec277
     "cmckni3.dark-plus-mono",
     "codezombiech.gitignore",
     "dbaeumer.vscode-eslint",
     "dracula-theme.theme-dracula",
     "dsznajder.es7-react-js-snippets",
-<<<<<<< HEAD
-    "EditorConfig.EditorConfig",
-    "esbenp.prettier-vscode",
-    "gamunu.vscode-yarn",
-    "Gruntfuggly.activitusbar",
-    "jpoissonnier.vscode-styled-components",
-    "KnisterPeter.vscode-github",
-    "monokai.theme-monokai-pro-vscode",
-    "nathanchapman.JavaScriptSnippets",
-    "natqe.reload",
-    "Orta.vscode-jest",
-    "stevencl.addDocComments",
-=======
     "esbenp.prettier-vscode",
     "fivethree.vscode-svelte-snippets",
     "gamunu.vscode-yarn",
@@ -55,7 +33,6 @@
     "stevencl.addDocComments",
     "svelte.svelte-vscode-nightly",
     "swashata.beautiful-ui",
->>>>>>> a8e278e0a86825ca1de9b578f71c580788eec277
     "vadymbiliuk.ts-react-snippets",
     "vscodevim.vim",
     "wmaurer.change-case",
