@@ -33,7 +33,6 @@ inoremap [<CR>  [<CR>]<Esc>O
 set number
 "colorscheme molokai
 colorscheme dragula
-"colorscheme koehler
 set wildmenu
 set showcmd " show last command
 "set lazyredraw " redraw page only when needed
@@ -101,6 +100,17 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
+com! DeleteTrailingWS call s:DeleteTrailingWS()
+
+" Diff with saved file
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffWithSaved call s:DiffWithSaved()
 " ---- editorconfig fixed this ----
 " autocmd BufWrite *.js :call DeleteTrailingWS()
 " autocmd BufWrite *.py :call DeleteTrailingWS()
@@ -129,6 +139,25 @@ nnoremap <silent> <Leader>ee :e!<CR>
 " write file
 nnoremap <silent> <Leader>wr :update<CR>
 
+" Adds timestamp at the end of a line
+nnoremap <silent> <Leader>dt A<space><C-R>=strftime("(%m/%d/%y-%I:%M%p)")<CR><Esc>
+
+" Move Lines Up/Down
+" nnoremap <A-j> :m .+1<CR>==
+" nnoremap <A-k> :m .-2<CR>==
+" inoremap <A-j> <Esc>:m .+1<CR>==gi
+" inoremap <A-k> <Esc>:m .-2<CR>==gi
+" vnoremap <A-j> :m '>+1<CR>gv=gv
+" vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Move Lines Up/Down MACOS
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+"inoremap ∆ <Esc>:m .+1<CR>==gi " No insert
+"inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
 " MacVim silence error sounds
 set noerrorbells
 set novisualbell
@@ -153,6 +182,16 @@ vnoremap af :<C-U>silent! normal! ggVG<CR>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " search no jump
 nnoremap * *``
+
+if !has('nvim')
+  set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/Current/Python
+endif
+
+
+if has('nvim')
+  let g:python_host_prog  = '/usr/bin/python'
+  let g:python3_host_prog = '/usr/local/bin/python3.8'
+endif
 
 "function! SetupEnvironment()
 "  let l:path = expand('%:p')

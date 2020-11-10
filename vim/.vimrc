@@ -20,7 +20,7 @@ runtime custom/netrw.vim
 runtime custom/spellcheck.vim
 "runtime custom/syntastic.vim
 runtime custom/tags.vim
-runtime custom/tsuquyomi.vim
+"runtime custom/tsuquyomi.vim
 runtime custom/ale.vim
 runtime custom/utilsnips.vim
 runtime custom/vimtabs.vim
