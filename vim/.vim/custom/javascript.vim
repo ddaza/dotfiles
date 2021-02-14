@@ -1,5 +1,5 @@
 "----------vim-JSDoc----------
-nmap <silent> <C-l> <Plug>(jsdoc)
+"nmap <silent> <C-l> <Plug>(jsdoc)
 let g:jsdoc_enable_es6 = 1
 "----------vim-javascript----------
 let g:javascript_plugin_jsdoc = 1

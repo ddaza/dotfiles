@@ -13,6 +13,16 @@ fi
 #export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 #export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 
+# Option 2
+export LESS_TERMCAP_mb=$'\e[1m\e[32m'
+export LESS_TERMCAP_md=$'\e[1m\e[36m'
+export LESS_TERMCAP_me=$'\e[m\017'
+export LESS_TERMCAP_mr=$'\e[7m'
+export LESS_TERMCAP_se=$'\e[23m\e[m\017'
+export LESS_TERMCAP_so=$'\e[1m\e[33m\E[44m'
+export LESS_TERMCAP_ue=$'\e[24m\e[m\017'
+export LESS_TERMCAP_us=$'\e[4m\e[1m\e[37m'
+
 ### COLOR MAN PAGES
 man() {
   env \
@@ -82,6 +92,8 @@ fi
 export RIPGREP_CONFIG_PATH="/Users/[MY_USER]/.ripgreprc"
 export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND="fd --type f --hidden"
+# Allows local packages to add bins to the PATH
+export PATH="$PATH:./node_modules/.bin"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
