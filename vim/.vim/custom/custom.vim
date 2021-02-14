@@ -31,8 +31,9 @@ inoremap [<CR>  [<CR>]<Esc>O
 
 " ------ custom settings -----
 set number
-"colorscheme molokai
-colorscheme dragula
+colorscheme dracula
+"colorscheme onedark
+
 set wildmenu
 set showcmd " show last command
 "set lazyredraw " redraw page only when needed
@@ -190,7 +191,7 @@ endif
 
 if has('nvim')
   let g:python_host_prog  = '/usr/bin/python'
-  let g:python3_host_prog = '/usr/local/bin/python3.8'
+  let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
 "function! SetupEnvironment()
