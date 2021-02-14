@@ -7,7 +7,7 @@ git clone https://github.com/ycm-core/YouCompleteMe.git
 git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/dense-analysis/ale.git
 git clone https://github.com/vim-scripts/auto_autoread.vim.git
-git clone https://github.com/dracula/vim.git
+git clone https://github.com/dracula/vim.git dracula
 git clone https://github.com/editorconfig/editorconfig-vim.git
 git clone https://github.com/mattn/emmet-vim.git
 git clone https://github.com/junegunn/fzf.vim.git
