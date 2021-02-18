@@ -94,6 +94,9 @@ export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND="fd --type f --hidden"
 # Allows local packages to add bins to the PATH
 export PATH="$PATH:./node_modules/.bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
