@@ -30,6 +30,7 @@ git clone https://github.com/junegunn/vim-emoji.git
 git clone https://github.com/tpope/vim-eunuch.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/jparise/vim-graphql.git
+git clone https://github.com/dusans/vim-hardmode.git
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/heavenshell/vim-jsdoc.git
 git clone https://github.com/mxw/vim-jsx.git

@@ -63,5 +63,13 @@
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+shift+=",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "alt+shift+-",
+    "command": "editor.action.fontZoomOut"
   }
 ]

@@ -10,6 +10,7 @@ filetype plugin indent on
 runtime custom/ack.vim
 runtime custom/controlp.vim
 runtime custom/custom.vim
+runtime custom/emoji.vim
 runtime custom/easymotion.vim
 runtime custom/incsearch.vim
 runtime custom/emmet.vim
@@ -22,10 +23,12 @@ runtime custom/spellcheck.vim
 runtime custom/tags.vim
 "runtime custom/tsuquyomi.vim
 runtime custom/ale.vim
+runtime custom/prettier.vim
 runtime custom/utilsnips.vim
 runtime custom/vimtabs.vim
 runtime custom/ycm.vim
 runtime custom/airline.vim
+runtime custom/nerdtree_git.vim
 "--------------------------------
 
 " Add this in the gits config

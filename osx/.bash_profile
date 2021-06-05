@@ -35,10 +35,6 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[01;32m") \
     man "$@"
 }
-
-# set VIM mode bash
-# set -o vi
-
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
@@ -88,15 +84,16 @@ then
   alias df='colourify df'
 fi
 
-
 export RIPGREP_CONFIG_PATH="/Users/[MY_USER]/.ripgreprc"
 export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND="fd --type f --hidden"
-# Allows local packages to add bins to the PATH
-export PATH="$PATH:./node_modules/.bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Allows local packages to add bins to the PATH
+# export PATH="$PATH:./node_modules/.bin"
+export PATH="./node_modules/.bin:$PATH"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.

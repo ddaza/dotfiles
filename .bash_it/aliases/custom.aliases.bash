@@ -37,9 +37,10 @@ alias meld="/Applications/Meld.app/Contents/MacOS/Meld"
 
 # Work
 alias ios-simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+alias fast="yarn start"
 alias watch="yarn jest --watch"
 alias watchdumb="TERM=dumb yarn jest --watch --verbose=true"
-alias kill-chrome="ps -ax | grep -i chrome | awk '{print $1}' | xargs kill -9"
+alias kill-chrome="ps -ax | grep -i 'chrome' | awk '{print $1}' | xargs sudo kill -9"
 alias 2black="black --target-version=py27 --fast"
 alias gcempty="git commit --allow-empty"
 alias orig-files-delete="find . -type f -name '*.orig' -delete"
