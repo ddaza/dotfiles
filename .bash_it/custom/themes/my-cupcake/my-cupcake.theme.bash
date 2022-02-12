@@ -82,12 +82,25 @@ function cupcake_user {
   fi
 }
 
+function git_branch {
+  if [[ $COLUMNS -gt 60 ]]; then
+    echo -e "\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on ${icon_branch} \")${white}$(scm_prompt_info)${normal}"
+  fi
+}
+
 # PROMPT OUTPUT ===============================================================
 
 # Displays the current prompt
+# function prompt_command() {
+#   term_cols=$(tput cols)
+#   PS1="\n${icon_start}$(virtualenv_prompt)$(cupcake_user)$(cupcake_host)${icon_directory}${bold_purple} \W${normal}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on ${icon_branch} \")${white}$(scm_prompt_info)${normal}\n${icon_end}"
+#   PS2="${icon_end}"
+# }
+
+
 function prompt_command() {
   term_cols=$(tput cols)
-  PS1="\n${icon_start}$(virtualenv_prompt)$(cupcake_user)$(cupcake_host)${icon_directory}${bold_purple} \W${normal}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on ${icon_branch} \")${white}$(scm_prompt_info)${normal}\n${icon_end}"
+  PS1="\n${icon_start}$(virtualenv_prompt)$(cupcake_user)$(cupcake_host)${icon_directory}${bold_purple} \W${normal}$(git_branch)\n${icon_end}"
   PS2="${icon_end}"
 }
 

@@ -1,0 +1,51 @@
+{
+  "editor.fontFamily": "MonoLisa, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.lineHeight": 24,
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "files.autoSave": "off",
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
+  "relativeLineHeight.value": 1.6,
+  "svelte.plugin.typescript.diagnostics.enable": false,
+  "typescript.autoClosingTags": false,
+  "typescript.locale": "en",
+  "typescript.tsserver.useSeparateSyntaxServer": false,
+  "vim.argumentObjectClosingDelimiters": [")", "]", "}"],
+  "vim.argumentObjectOpeningDelimiters": ["(", "[", "{"],
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "vim.visualstar": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "t", "r"],
+      "commands": [":tabmove+"]
+    },
+    {
+      "before": ["<leader>", "t", "l"],
+      "commands": [":tabmove-"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["editor.action.formatDocument"]
+    }
+  ],
+  "workbench.colorTheme": "CodeSandbox Black 2021",
+  "workbench.editor.openSideBySideDirection": "down"
+}
