@@ -88,7 +88,7 @@ set encoding=utf-8
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
 "set guifont=Liberation\ Mono\ for\ Powerline\ 11
 "set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
-set guifont=DankMono-Regular:h14
+set guifont=Dank\ Mono:h14
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
 set guioptions-=L " hide scrollbar Macvim
@@ -96,7 +96,7 @@ set guioptions-=L " hide scrollbar Macvim
 "set paste
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
+func! s:DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
   exe "normal `z"
@@ -142,6 +142,7 @@ nnoremap <silent> <Leader>wr :update<CR>
 
 " Adds timestamp at the end of a line
 nnoremap <silent> <Leader>dt A<space><C-R>=strftime("(%m/%d/%y-%I:%M%p)")<CR><Esc>
+nnoremap <silent> <Leader>xdt ^t]rXA<space><C-R>=strftime("(%m/%d/%y-%I:%M%p)")<CR><Esc>
 
 " Move Lines Up/Down
 " nnoremap <A-j> :m .+1<CR>==

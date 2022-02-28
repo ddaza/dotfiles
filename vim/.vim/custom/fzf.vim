@@ -4,7 +4,7 @@ set rtp+=/usr/local/opt/fzf
 nnoremap <silent> <Leader>fz :Files<CR>
 
 "cnoreabbrev Ag Ag!
-nnoremap <Leader>k :Ag<Space>
+"nnoremap <Leader>k :Ag<Space>
 
 "cnoreabbrev Rg Rg!
 nnoremap <Leader>r :Rg<Space>

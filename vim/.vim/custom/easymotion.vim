@@ -22,8 +22,8 @@ let g:EasyMotion_smartcase = 1
 
 " JK motions: Line motions
 map <Leader>f <Plug>(easymotion-lineforward)
-"map <Leader>j <Plug>(easymotion-j)
-"map <Leader>k <Plug>(easymotion-k)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 map <Leader>F <Plug>(easymotion-linebackward)
 
 "" <Leader>f{char} to move to {char}

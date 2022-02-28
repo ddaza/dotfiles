@@ -17,6 +17,21 @@ let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 let g:ycm_tsserver_binary_path = 'tsserver'
 let g:ycm_tsserver_args = ['--checkJs']
 
+let g:ycm_filetype_blacklist =
+\{
+\   'tagbar': 1,
+\   'notes': 1,
+\   'netrw': 1,
+\   'unite': 1,
+\   'text': 1,
+\   'vimwiki': 1,
+\   'pandoc': 1,
+\   'infolog': 1,
+\   'leaderf': 1,
+\   'mail': 1
+\ }
+
+
 "let g:ycm_key_list_previous_completion = ['<Up>', '<S-TAB>']
 " \     'cmdline': [ '/Users/z0031ww/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver', '--checkJs' ],
 " \     'cmdline': [ '/Users/z0031ww/.nvm/versions/node/v12.13.1/bin/tsserver', '--checkJs' ],
@@ -24,7 +39,7 @@ let g:ycm_tsserver_args = ['--checkJs']
 "  \ [
 "  \   {
 "  \     'name': 'javascript',
-"  \     'cmdline': [ '/User/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver', '--checkJs' ],
+"  \     'cmdline': [ '~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver', '--checkJs' ],
 "  \     'filetypes': [ 'javascript.jsx' ]
 "  \   }
 "  \]

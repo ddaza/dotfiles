@@ -25,6 +25,7 @@ git clone https://github.com/tpope/vim-abolish.git
 git clone https://github.com/vim-airline/vim-airline.git
 git clone https://github.com/vim-airline/vim-airline-themes
 git clone https://github.com/arithran/vim-delete-hidden-buffers.git
+git clone https://github.com/dkprice/vim-easygrep.git
 git clone https://github.com/easymotion/vim-easymotion.git
 git clone https://github.com/junegunn/vim-emoji.git
 git clone https://github.com/tpope/vim-eunuch.git
@@ -40,4 +41,3 @@ git clone https://github.com/tpope/vim-rhubarb
 git clone https://github.com/honza/vim-snippets.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/fweep/vim-tabber.git
-#git clone https://github.com/flazz/vim-colorschemes.git

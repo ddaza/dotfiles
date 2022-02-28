@@ -9,10 +9,8 @@
   "vim.hlsearch": true,
   "vim.easymotion": true,
   "vim.foldfix": true,
-  "files.autoSave": "onFocusChange",
   "vim.visualstar": true,
   "zenMode.hideActivityBar": false,
-  "workbench.activityBar.visible": false,
   "workbench.startupEditor": "newUntitledFile",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -60,11 +58,12 @@
     {
       "before": ["<leader>", "z"],
       "after": ["<leader>", "<leader>", "2", "s"]
+    },
+    {
+      "before": ["v", "a", "f"],
+      "commands": ["editor.action.selectAll"]
     }
   ],
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "AllAutocomplete.cycleOpenDocumentsOnLaunch": true,
   "AllAutocomplete.updateOnlyOnSave": true,
   "clock.alignment": "Right",
@@ -72,18 +71,18 @@
   "clock.iconName": "watch",
   "clock.updateInterval": 5000,
   "editor.minimap.enabled": true,
-  "editor.minimap.maxColumn": 60,
+  "editor.minimap.maxColumn": 35,
   "editor.minimap.renderCharacters": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
-  "vim.easymotionMarkerBackgroundColor": "yellow",
   "vim.easymotionMarkerFontWeight": "bold",
-  "vim.easymotionMarkerForegroundColorOneChar": "black",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "material-icon-theme.folders.color": "#ccd1f9",
-  "workbench.colorTheme": "Dracula",
   "workbench.sideBar.location": "left",
   "workbench.iconTheme": "material-icon-theme",
   "emmet.includeLanguages": {
@@ -92,7 +91,42 @@
   "emmet.showSuggestionsAsSnippets": true,
   "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "editor.fontSize": 14,
-  "editor.lineHeight": 16,
-  "extensions.autoUpdate": "onlyEnabledExtensions"
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "editor.renderLineHighlight": "all",
+  "vim.argumentObjectClosingDelimiters": [")", "]", "}"],
+  "vim.argumentObjectOpeningDelimiters": ["(", "[", "{"],
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "files.autoSave": "onFocusChange",
+  "workbench.colorTheme": "βui - Monokai Pro",
+  "debug.javascript.usePreview": false,
+  "debug.showInStatusBar": "never",
+  "debug.internalConsoleOptions": "neverOpen",
+  "debug.onTaskErrors": "abort",
+  "debug.openDebug": "neverOpen",
+  "editor.glyphMargin": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.autoClosingDelete": "never",
+  "eslint.options": {},
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json"
+  ],
+  "window.nativeTabs": true,
+  "editor.lineHeight": 1.2,
+  "editor.fontSize": 16,
+  "workbench.fontAliasing": "auto",
+  "terminal.integrated.macOptionIsMeta": true,
+  "stylelint.packageManager": "yarn",
+  "stylelint.validate": ["css", "less", "postcss", "typescript"],
+  "workbench.activityBar.visible": false
 }
