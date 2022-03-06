@@ -22,7 +22,7 @@ alias gcnam="git commit -v -anm"
 alias gcnm="git commit -v -nm"
 alias gurl="git remote show origin"
 alias gbclean="git fetch --all --prune && git branch -l -v | grep '\[gone\]' | awk '{ print $1 }' | xargs git branch -D"
-alias gcomgl="git checkout master; git pull"
+alias gcoml="git checkout $(get_default_branch); git pull"
 alias gwip="git commit -anm \"--wip-- [skip ci]\""
 
 # Mac Only

@@ -17,15 +17,18 @@
 This is a cool tool to enhance your bash productivity
 https://github.com/Bash-it/bash-it
 
-To backup your settings use this script provided by the creator 
+To backup your settings use this script provided by the creator
 https://github.com/nwinkler/dotfiles/blob/master/home/bin/backup-bash-it
 
 change the variable `BACKUP_FILE_NAME` to where you want it to create your backup script
 
+Use faster git status in the command line
+https://github.com/romkatv/gitstatus
+
 # VsCodium
 
 I use the vscode alternative and sometimes their extensions are not updated as often or are as popular.
-So, to get the VsCode extensions you need to chance a config file like this: 
+So, to get the VsCode extensions you need to chance a config file like this:
 
 - The file is in `/Applications/VSCodium.app/Contents/Resources/app/product.json`
 - you need to change the `extensionGallery` key from this
@@ -46,3 +49,7 @@ So, to get the VsCode extensions you need to chance a config file like this:
   ```
 
 - change it back when done
+
+# Powerline fonts
+
+https://github.com/powerline/fonts

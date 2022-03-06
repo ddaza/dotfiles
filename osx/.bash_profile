@@ -60,6 +60,7 @@ shopt -s checkwinsize
 # Set default editor
 export EDITOR="nvim"
 
+
 export GRC=`which grc`
 if [ "$TERM" != dumb ] && [ -n "$GRC" ]
 then
@@ -92,8 +93,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Allows local packages to add bins to the PATH
-# export PATH="$PATH:./node_modules/.bin"
-export PATH="./node_modules/.bin:$PATH"
+export PATH="$PATH:./node_modules/.bin"
+# export PATH="./node_modules/.bin:$PATH"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
