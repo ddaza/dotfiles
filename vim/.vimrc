@@ -4,11 +4,8 @@ syntax on
 filetype plugin indent on
 
 " ------- Import files --------
-"runtime custom/snipmate.vim
-"runtime custom/supertab.vim
 
 runtime custom/ack.vim
-runtime custom/controlp.vim
 runtime custom/custom.vim
 runtime custom/emoji.vim
 runtime custom/easymotion.vim

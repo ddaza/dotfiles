@@ -31,15 +31,3 @@ let g:ycm_filetype_blacklist =
 \   'mail': 1
 \ }
 
-
-"let g:ycm_key_list_previous_completion = ['<Up>', '<S-TAB>']
-" \     'cmdline': [ '/Users/z0031ww/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver', '--checkJs' ],
-" \     'cmdline': [ '/Users/z0031ww/.nvm/versions/node/v12.13.1/bin/tsserver', '--checkJs' ],
-"let g:ycm_language_server =
-"  \ [
-"  \   {
-"  \     'name': 'javascript',
-"  \     'cmdline': [ '~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver', '--checkJs' ],
-"  \     'filetypes': [ 'javascript.jsx' ]
-"  \   }
-"  \]
