@@ -22,4 +22,11 @@ testjs:*.json
 code:include:js,ts
 
 --type-add
-typescript:*.{ts,tsx}
+ts:*.{ts,tsx,mts}
+
+--type-add
+testgo:*_test.go
+
+--type-add
+testgo:mocks/*
+

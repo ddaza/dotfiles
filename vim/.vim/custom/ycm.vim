@@ -6,7 +6,7 @@ let g:ycm_register_as_syntastic_checker = 0
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 
-let g:ycm_server_python_interpreter='/usr/local/bin/python3'
+let g:ycm_server_python_interpreter='/opt/homebrew/bin/python3.11'
 let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
 let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 "let g:ycm_semantic_triggers={

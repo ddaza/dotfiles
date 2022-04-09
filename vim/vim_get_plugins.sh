@@ -7,9 +7,11 @@ git clone https://github.com/ycm-core/YouCompleteMe.git
 git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/dense-analysis/ale.git
 git clone https://github.com/dracula/vim.git dracula
+git clone https://github.com/catppuccin/vim.git catppuccin
 git clone https://github.com/editorconfig/editorconfig-vim.git
 git clone https://github.com/mattn/emmet-vim.git
 git clone https://github.com/junegunn/fzf.vim.git
+git clone https://github.com/tweekmonster/gofmt.vim.git
 git clone https://github.com/othree/html5.vim.git
 git clone https://github.com/cocopon/iceberg.vim.git
 git clone https://github.com/haya14busa/incsearch-easymotion.vim
@@ -41,3 +43,4 @@ git clone https://github.com/tpope/vim-rhubarb
 git clone https://github.com/honza/vim-snippets.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/fweep/vim-tabber.git
+git clone https://github.com/varnishcache-friends/vim-varnish.git

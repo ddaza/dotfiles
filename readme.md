@@ -53,3 +53,10 @@ So, to get the VsCode extensions you need to chance a config file like this:
 # Powerline fonts
 
 https://github.com/powerline/fonts
+
+# TMUX 
+Tmux Plugin manager - https://github.com/tmux-plugins/tpm
+
+https://github.com/tmux-plugins/tmux-copycat
+https://github.com/tmux-plugins/tmux-yank
+https://github.com/tmux-plugins/tmux-sensible

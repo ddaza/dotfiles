@@ -21,25 +21,23 @@ function npm-which() {
   [[ -f $local_path ]] && echo "$local_path"
 }
 
-# Compatible with ranger 1.4.2 through 1.7.*
+# Compatible with ranger 1.4.2 through 1.9.*
 #
-# Automatically change the directory in bash after closing ranger
+# Automatically change the current working directory after closing ranger
 #
-# This is a bash function for .bashrc to automatically change the directory to
-# the last visited one after ranger quits.
+# This is a shell function to automatically change the current working
+# directory to the last visited one after ranger quits. Either put it into your
+# .zshrc/.bashrc/etc or source this file from your shell configuration.
 # To undo the effect of this function, you can type "cd -" to return to the
 # original directory.
-#
-# On OS X 10 or later, replace `usr/bin/ranger` with `/usr/local/bin/ranger`.
 
-function ranger-cd {
-    tempfile="$(mktemp -t tmp.XXXXXX)"
-    /usr/local/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
-    test -f "$tempfile" &&
-    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
-        cd -- "$(cat "$tempfile")"
+ranger_cd() {
+    temp_file="$(mktemp -t "ranger_cd.XXXXXXXXXX")"
+    TERM=xterm-256color ranger --choosedir="$temp_file" -- "${@:-$PWD}"
+    if chosen_dir="$(cat -- "$temp_file")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
+        cd -- "$chosen_dir"
     fi
-    rm -f -- "$tempfile"
+    rm -f -- "$temp_file"
 }
 
 # remove duplicates while preserving input order
@@ -95,3 +93,18 @@ function history_fzf {
   fi
 }
 
+
+function drun() {
+  if [ -z $1 ]; then
+    echo "error: please provide image"
+    exit 1
+  fi
+  image="$1"
+
+  cmd="/bin/sh"
+  if [ ! -z $2 ]; then
+    cmd="$2"
+  fi
+
+  docker run -it --entrypoint="" ${image} ${cmd}
+}

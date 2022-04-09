@@ -31,8 +31,8 @@ inoremap [<CR>  [<CR>]<Esc>O
 
 " ------ custom settings -----
 set number relativenumber
+"colorscheme catppuccin_mocha
 colorscheme dracula
-"colorscheme onedark
 
 set wildmenu
 set showcmd " show last command
@@ -184,14 +184,14 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " search no jump
 nnoremap * *``
 
-if !has('nvim')
-  set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/Current/Python
-endif
+"if !has('nvim')
+"  set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/Current/Python
+"endif
 
 
 if has('nvim')
   let g:python_host_prog  = '/usr/bin/python'
-  let g:python3_host_prog = '/usr/local/bin/python3'
+  let g:python3_host_prog = '/opt/homebrew/bin/python3'
 endif
 
 "function! SetupEnvironment()
