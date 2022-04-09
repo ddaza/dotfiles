@@ -8,7 +8,7 @@
   conflictstyle = merge
   tool = fugitive
 [mergetool "fugitive"]
-  cmd = mvim -f -c \"Gdiff\" \"$MERGED\"
+  cmd = mvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [hub]
   host = enterprise.site.com
 # for local projects in GH
