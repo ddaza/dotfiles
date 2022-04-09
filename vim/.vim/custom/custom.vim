@@ -30,7 +30,7 @@ inoremap {*<CR>  {/*<CR>*/}<Esc>O
 inoremap [<CR>  [<CR>]<Esc>O
 
 " ------ custom settings -----
-set number
+set number relativenumber
 colorscheme dracula
 "colorscheme onedark
 
