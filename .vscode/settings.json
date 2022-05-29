@@ -101,7 +101,7 @@
     "strings": true
   },
   "files.autoSave": "onFocusChange",
-  "workbench.colorTheme": "βui - Monokai Pro",
+  "workbench.colorTheme": "Dracula",
   "debug.javascript.usePreview": false,
   "debug.showInStatusBar": "never",
   "debug.internalConsoleOptions": "neverOpen",
@@ -128,5 +128,12 @@
   "terminal.integrated.macOptionIsMeta": true,
   "stylelint.packageManager": "yarn",
   "stylelint.validate": ["css", "less", "postcss", "typescript"],
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "redhat.telemetry.enabled": false,
+  "editor.lineNumbers": "relative",
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
+  "prettier.singleQuote": true,
+  "prettier.prettierPath": "prettier",
+  "window.confirmBeforeClose": "keyboardOnly"
 }

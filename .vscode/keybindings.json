@@ -71,5 +71,14 @@
   {
     "key": "alt+shift+-",
     "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "-workbench.action.search.toggleQueryDetails",
+    "when": "inSearchEditor || searchViewletFocus"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]
