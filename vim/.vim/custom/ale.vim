@@ -1,7 +1,7 @@
 let g:ale_linters = {
 \   'javascript': ['eslint', 'tsserver'],
 \   'typescript': ['eslint', 'tsserver'],
-\   'markdown': ['markdownlint', 'writegood', 'vale', 'alex'],
+\   'markdown': ['markdownlint', 'writegood', 'vale', 'alex', 'proselint']
 \   'json': ['jq', 'jsonlint']
 \}
 let g:ale_fixers = {

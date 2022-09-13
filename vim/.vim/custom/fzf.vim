@@ -1,6 +1,6 @@
 " If installed using Homebrew
-"set rtp+=/usr/local/opt/fzf
-set rtp+=/opt/homebrew/opt/fzf
+set rtp+=/usr/local/opt/fzf
+"set rtp+=/opt/homebrew/opt/fzf
 
 nnoremap <silent> <Leader>fz :Files<CR>
 

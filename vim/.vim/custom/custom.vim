@@ -48,6 +48,7 @@ set foldenable "add foldable code?
 " clipboard
 "set clipboard=unnamedplus "set clipboard to work xterm
 " this seems to be working with TMUX
+"set clipboard^=unnamed,unnamedplus
 if has('nvim')
   set clipboard+=unnamedplus
 else
