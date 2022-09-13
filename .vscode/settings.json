@@ -1,115 +1,65 @@
 {
-  "debug.showInlineBreakpointCandidates": false,
-  "debug.showBreakpointsInOverviewRuler": false,
-  "debug.allowBreakpointsEverywhere": false,
-  "debug.javascript.codelens.npmScripts": "never",
-  "editor.fontFamily": "Dank Mono, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "vim.useSystemClipboard": true,
-  "vim.hlsearch": true,
-  "vim.easymotion": true,
-  "vim.foldfix": true,
-  "vim.visualstar": true,
-  "zenMode.hideActivityBar": false,
-  "workbench.startupEditor": "newUntitledFile",
-  "[typescript]": {
+  "AllAutocomplete.cycleOpenDocumentsOnLaunch": true,
+  "AllAutocomplete.updateOnlyOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.wordWrap": "on",
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "diffEditor.ignoreTrimWhitespace": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.enableTrash": false,
-  "vim.enableNeovim": true,
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  "explorer.autoReveal": false,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "t", "r"],
-      "commands": [":tabmove+"]
-    },
-    {
-      "before": ["<leader>", "t", "l"],
-      "commands": [":tabmove-"]
-    },
-    {
-      "before": ["<leader>", "e", "e"],
-      "commands": [":e!"]
-    },
-    {
-      "before": ["<leader>", "f", "r"],
-      "commands": ["copyRelativeFilePath"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "commands": ["editor.action.formatDocument"]
-    },
-    {
-      "before": ["<leader>", "z"],
-      "after": ["<leader>", "<leader>", "2", "s"]
-    },
-    {
-      "before": ["v", "a", "f"],
-      "commands": ["editor.action.selectAll"]
-    }
-  ],
-  "AllAutocomplete.cycleOpenDocumentsOnLaunch": true,
-  "AllAutocomplete.updateOnlyOnSave": true,
   "clock.alignment": "Right",
   "clock.format": "hh:MM TT",
   "clock.iconName": "watch",
   "clock.updateInterval": 5000,
+  "debug.allowBreakpointsEverywhere": false,
+  "debug.internalConsoleOptions": "neverOpen",
+  "debug.javascript.codelens.npmScripts": "never",
+  "debug.javascript.usePreview": false,
+  "debug.onTaskErrors": "abort",
+  "debug.openDebug": "neverOpen",
+  "debug.showBreakpointsInOverviewRuler": false,
+  "debug.showInStatusBar": "never",
+  "debug.showInlineBreakpointCandidates": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.autoClosingDelete": "never",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontFamily": "Dank Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.lineHeight": 1.2,
+  "editor.lineNumbers": "relative",
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 35,
   "editor.minimap.renderCharacters": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
-  "vim.easymotionMarkerFontWeight": "bold",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.quickSuggestions": {
+    "comments": true,
+    "other": true,
+    "strings": true
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "material-icon-theme.folders.color": "#ccd1f9",
-  "workbench.sideBar.location": "left",
-  "workbench.iconTheme": "material-icon-theme",
+  "editor.renderLineHighlight": "all",
+  "editor.wordWrap": "on",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
   "emmet.showSuggestionsAsSnippets": true,
-  "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "extensions.autoUpdate": "onlyEnabledExtensions",
-  "editor.renderLineHighlight": "all",
-  "vim.argumentObjectClosingDelimiters": [")", "]", "}"],
-  "vim.argumentObjectOpeningDelimiters": ["(", "[", "{"],
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": true,
-    "strings": true
-  },
-  "files.autoSave": "onFocusChange",
-  "workbench.colorTheme": "Dracula",
-  "debug.javascript.usePreview": false,
-  "debug.showInStatusBar": "never",
-  "debug.internalConsoleOptions": "neverOpen",
-  "debug.onTaskErrors": "abort",
-  "debug.openDebug": "neverOpen",
-  "editor.glyphMargin": false,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.autoClosingDelete": "never",
   "eslint.options": {},
   "eslint.probe": [
     "javascript",
@@ -121,19 +71,126 @@
     "markdown",
     "json"
   ],
-  "window.nativeTabs": true,
-  "editor.lineHeight": 1.2,
-  "editor.fontSize": 16,
-  "workbench.fontAliasing": "auto",
-  "terminal.integrated.macOptionIsMeta": true,
-  "stylelint.packageManager": "yarn",
-  "stylelint.validate": ["css", "less", "postcss", "typescript"],
-  "workbench.activityBar.visible": false,
-  "redhat.telemetry.enabled": false,
-  "editor.lineNumbers": "relative",
-  "prettier.requireConfig": true,
-  "prettier.useEditorConfig": false,
-  "prettier.singleQuote": true,
+  "explorer.autoReveal": false,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "files.autoSave": "onFocusChange",
+  "files.enableTrash": false,
+  "material-icon-theme.folders.color": "#ccd1f9",
   "prettier.prettierPath": "prettier",
-  "window.confirmBeforeClose": "keyboardOnly"
+  "prettier.requireConfig": true,
+  "prettier.singleQuote": true,
+  "prettier.useEditorConfig": false,
+  "redhat.telemetry.enabled": false,
+  "stylelint.packageManager": "yarn",
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "typescript"
+  ],
+  "terminal.integrated.macOptionIsMeta": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.argumentObjectClosingDelimiters": [
+    ")",
+    "]",
+    "}"
+  ],
+  "vim.argumentObjectOpeningDelimiters": [
+    "(",
+    "[",
+    "{"
+  ],
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+  "vim.easymotionMarkerFontWeight": "bold",
+  "vim.enableNeovim": true,
+  "vim.foldfix": true,
+  "vim.hlsearch": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "r"
+      ],
+      "commands": [
+        ":tabmove+"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "l"
+      ],
+      "commands": [
+        ":tabmove-"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e",
+        "e"
+      ],
+      "commands": [
+        ":e!"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "copyRelativeFilePath"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "after": [
+        "<leader>",
+        "<leader>",
+        "2",
+        "s"
+      ],
+      "before": [
+        "<leader>",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "a",
+        "f"
+      ],
+      "commands": [
+        "editor.action.selectAll"
+      ]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "window.confirmBeforeClose": "keyboardOnly",
+  "window.nativeTabs": true,
+  "window.zoomLevel": 1,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Dracula",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.fontAliasing": "auto",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "newUntitledFile",
+  "zenMode.hideActivityBar": false
 }
