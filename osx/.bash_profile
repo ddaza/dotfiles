@@ -5,15 +5,6 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
 fi
 
 # Less Colors for Man Pages
-#export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
-#export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
-#export LESS_TERMCAP_me=$'\e[0m'           # end mode
-#export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
-#export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
-#export LESS_TERMCAP_ue=$'\e[0m'           # end underline
-#export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
-
-# Option 2
 export LESS_TERMCAP_mb=$'\e[1m\e[32m'
 export LESS_TERMCAP_md=$'\e[1m\e[36m'
 export LESS_TERMCAP_me=$'\e[m\017'
@@ -38,7 +29,7 @@ man() {
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
-*) return;;
+    *) return;;
 esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -85,9 +76,16 @@ then
   alias df='colourify df'
 fi
 
+alias ghm='cd "$(git rev-parse --show-toplevel)"'
+
 export RIPGREP_CONFIG_PATH="/Users/[MY_USER]/.ripgreprc"
 export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND="fd --type f --hidden"
+
+
+#export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -21,7 +21,7 @@ alias gcanm="git commit -v -anm"
 alias gcnam="git commit -v -anm"
 alias gcnm="git commit -v -nm"
 alias gurl="git remote show origin"
-alias gbclean="git fetch --all --prune && git branch -l -v | grep '\[gone\]' | awk '{ print $1 }' | xargs git branch -D"
+#alias gbclean="git fetch --all --prune && git branch -l -v | grep '\[gone\]' | awk '{ print $1 }' | xargs git branch -D"
 alias gcoml="git checkout $(get_default_branch); git pull"
 alias gwip="git commit -anm \"--wip-- [skip ci]\""
 
@@ -31,16 +31,17 @@ alias gwip="git commit -anm \"--wip-- [skip ci]\""
 # alias hfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 # alias chrome-insecure='open -a Google\ Chrome --args --disable-web-security --user-data-dir'
 # alias chrome-insecure="open -na /Applications/Google\ Chrome.app --args --disable-web-security --ignore-certificate-errors --allow-running-insecure-content --user-data-dir --disable-site-isolation-trials"
-# alias canary-insecure="open -na /Applications/Google\ Chrome\ Canary.app --args --disable-web-security --ignore-certificate-errors --allow-running-insecure-content --user-data-dir=\"/Users/z0031ww/.chrome-canary/\" --disable-site-isolation-trials"
+# alias canary-insecure="open -na /Applications/Google\ Chrome\ Canary.app --args --disable-web-security --ignore-certificate-errors --allow-running-insecure-content --user-data-dir=\"/Users/[USERR]/.chrome-canary/\" --disable-site-isolation-trials"
 # alias t-dns='echo "127.0.0.1    localhost.t.com" | sudo tee -a  /private/etc/hosts && dscacheutil -flushcache'
-alias meld="/Applications/Meld.app/Contents/MacOS/Meld"
+# alias ios-simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+# alias meld="/Applications/Meld.app/Contents/MacOS/Meld"
 
 # Work
 alias ios-simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias fast="yarn start"
 alias watch="yarn jest --watch"
 alias watchdumb="TERM=dumb yarn jest --watch --verbose=true"
-alias kill-chrome="ps -ax | grep -i 'chrome' | awk '{print $1}' | xargs sudo kill -9"
+#alias kill-chrome="ps -ax | grep -i 'chrome' | awk '{print $1}' | xargs sudo kill -9"
 alias 2black="black --target-version=py27 --fast"
 alias gcempty="git commit --allow-empty"
 alias orig-files-delete="find . -type f -name '*.orig' -delete"

@@ -75,6 +75,14 @@ function history_cleanup {
    fi
 }
 
+function gbclean {
+	git fetch --all --prune && git branch -l -v | grep '\[gone\]' | awk '{ print $1 }' | xargs git branch -D
+}
+
+function kill_chrome {
+	pgrep -i 'chrome' | awk '{ print $1 }' | xargs sudo kill -9
+}
+
 __fzfcmd() {
   [ -n "$TMUX_PANE" ] && { [ "${FZF_TMUX:-0}" != 0 ] || [ -n "$FZF_TMUX_OPTS" ]; } &&
     echo "fzf-tmux ${FZF_TMUX_OPTS:--d${FZF_TMUX_HEIGHT:-40%}} -- " || echo "fzf"
