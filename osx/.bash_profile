@@ -33,18 +33,6 @@ export LESS_TERMCAP_so=$'\e[1m\e[33m\E[44m'
 export LESS_TERMCAP_ue=$'\e[24m\e[m\017'
 export LESS_TERMCAP_us=$'\e[4m\e[1m\e[37m'
 
-### COLOR MAN PAGES
-man() {
-  env \
-    LESS_TERMCAP_mb=$(printf "\e[01;31m") \
-    LESS_TERMCAP_md=$(printf "\e[01;38;5;74m") \
-    LESS_TERMCAP_me=$(printf "\e[0m") \
-    LESS_TERMCAP_se=$(printf "\e[0m") \
-    LESS_TERMCAP_so=$(printf "\e[01;44;33m") \
-    LESS_TERMCAP_ue=$(printf "\e[0m") \
-    LESS_TERMCAP_us=$(printf "\e[01;32m") \
-    man "$@"
-}
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
