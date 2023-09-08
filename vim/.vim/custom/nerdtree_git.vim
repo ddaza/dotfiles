@@ -11,5 +11,5 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Unknown'   :'?',
                 \ }
 
-let g:NERDTreeGitStatusGitBinPath = '/usr/local/bin/git'
+let g:NERDTreeGitStatusGitBinPath = $HOMEBREW_PREFIX .. '/bin/git'
 let g:NERDTreeGitStatusConcealBrackets = 1 " default: 0

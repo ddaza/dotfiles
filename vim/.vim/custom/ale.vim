@@ -6,7 +6,7 @@ let g:ale_linters = {
       \   'json': ['jq', 'jsonlint'],
       \   'rust': ['analyzer'],
       \   'yaml': ['yaml-language-server'],
-      \   'go':['golangci-lint'],
+      \   'go':['gopls', 'gobuild', 'govet', 'golangci-lint'],
       \}
 
 let g:ale_fixers = {
@@ -18,19 +18,25 @@ let g:ale_fixers = {
       \}
 
 let g:airline#extensions#ale#enabled = 1
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_set_loclist = 1
 
-let g:ale_yaml_spectral_use_global = 1
-
 " Hover Ale
+"
 let g:ale_hover_to_preview = 1
-let g:ale_set_balloons = 0
-let g:ale_floating_preview = 0
-let g:ale_hover_to_floating_preview = 0
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
 
-let g:ale_completion_tsserver_autoimport = 0
+"let g:ale_floating_preview = 1
+let g:ale_hover_to_floating_preview = 1
+let g:ale_detail_to_floating_preview = 0
+
+
+"let g:ale_set_balloons = 0
+
+"let g:ale_completion_tsserver_autoimport = 0
 let g:ale_completion_enabled = 0
-let g:ale_virtualtext_cursor=0
+let g:ale_virtualtext_cursor = 0
+
+let g:ale_go_golangci_lint_options = '--fast'
 
 nnoremap <silent> <Leader>ki       :ALEHover<CR>
