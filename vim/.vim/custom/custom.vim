@@ -31,7 +31,7 @@ inoremap [<CR>  [<CR>]<Esc>O
 
 " ------ custom settings -----
 set number relativenumber
-"colorscheme catppuccin_mocha
+"colorscheme catppuccin_macchiato
 colorscheme dracula
 
 set wildmenu
@@ -87,7 +87,7 @@ set encoding=utf-8
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
 "set guifont=Liberation\ Mono\ for\ Powerline\ 11
 "set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
-set guifont=Dank\ Mono:h14
+set guifont=Dank\ Mono:h18
 set guioptions-=T " hide the toolbar
 set guioptions-=r " hide scrollbar
 set guioptions-=L " hide scrollbar Macvim
@@ -184,14 +184,8 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " search no jump
 nnoremap * *``
 
-"if !has('nvim')
-"  set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/Current/Python
-"endif
-
-
-if has('nvim')
-  let g:python_host_prog  = '/usr/bin/python'
-  let g:python3_host_prog = '/opt/homebrew/bin/python3'
+if !has('nvim')
+  set pythonthreedll=/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/Current/Python3
 endif
 
 "function! SetupEnvironment()
