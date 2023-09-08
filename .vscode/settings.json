@@ -1,5 +1,4 @@
 {
-  "AllAutocomplete.cycleOpenDocumentsOnLaunch": true,
   "AllAutocomplete.updateOnlyOnSave": true,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -44,14 +43,13 @@
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.autoClosingDelete": "never",
   "editor.bracketPairColorization.enabled": true,
-  "editor.fontFamily": "Dank Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Dank Mono, Cartograph CF, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.letterSpacing": -0.2,
   "editor.lineHeight": 1.1,
-  "editor.lineNumbers": "relative",
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 35,
   "editor.minimap.renderCharacters": false,
@@ -66,7 +64,6 @@
     "javascript": "javascriptreact"
   },
   "emmet.showSuggestionsAsSnippets": true,
-  "eslint.alwaysShowStatus": true,
   "eslint.options": {},
   "eslint.probe": [
     "javascript",
@@ -91,11 +88,8 @@
   "go.toolsManagement.autoUpdate": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "material-icon-theme.folders.color": "#ccd1f9",
-  "prettier.prettierPath": "prettier",
   "prettier.useEditorConfig": false,
   "redhat.telemetry.enabled": false,
-  "stylelint.packageManager": "yarn",
-  "stylelint.validate": ["css", "less", "postcss", "typescript"],
   "terminal.integrated.macOptionIsMeta": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.argumentObjectClosingDelimiters": [")", "]", "}"],
@@ -135,6 +129,14 @@
     {
       "before": ["v", "a", "f"],
       "commands": ["editor.action.selectAll"]
+    },
+    {
+      "before": ["<C-w>", "L"],
+      "commands": ["workbench.action.moveEditorToRightGroup"]
+    },
+    {
+      "before": ["<C-w>", "H"],
+      "commands": ["workbench.action.moveEditorToLeftGroup"]
     }
   ],
   "vim.smartRelativeLine": true,
@@ -142,12 +144,11 @@
   "vim.visualstar": true,
   "window.confirmBeforeClose": "keyboardOnly",
   "window.nativeTabs": true,
+  "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "zenMode.hideActivityBar": false
 }
