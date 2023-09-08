@@ -6,7 +6,7 @@ cmap Qa qa
 
 " --------------- Keybindings -------------------
 " Avoid ESC key Two semicolons are easy to type.
-imap ;; <Esc>
+"imap ;; <Esc>
 " Leaving the Ex Mode forever
 nnoremap Q <nop>
 "Save with F2
@@ -32,7 +32,12 @@ inoremap [<CR>  [<CR>]<Esc>O
 " ------ custom settings -----
 set number relativenumber
 "colorscheme catppuccin_macchiato
-colorscheme dracula
+"
+if has('nvim')
+  colorscheme tokyonight-moon
+else
+  colorscheme dracula
+endif
 
 set wildmenu
 set showcmd " show last command
@@ -53,6 +58,9 @@ if has('nvim')
 else
   set clipboard^=unnamed,unnamedplus
 endif
+
+"vnoremap <Leader>y "+y
+"vnoremap <Leader>Y "+Y
 
 "macvim
 "set clipboard=unnamedplus,unnamed

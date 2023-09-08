@@ -45,12 +45,12 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "Dank Mono, Cartograph CF, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
-  "editor.letterSpacing": -0.2,
+  "editor.scrollbar.verticalScrollbarSize": 5,
+  "editor.letterSpacing": -0.3,
   "editor.lineHeight": 1.1,
-  "editor.lineNumbers": "relative",
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 35,
   "editor.minimap.renderCharacters": false,
@@ -80,12 +80,12 @@
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "files.autoSave": "onFocusChange",
   "files.enableTrash": false,
-  "go.enableCodeLens": {
-    "runtest": false
-  },
+  // "go.enableCodeLens": {
+  //   "runtest": true
+  // },
   "go.lintFlags": ["--fast"],
   "go.lintTool": "golangci-lint",
-  "go.testExplorer.enable": false,
+  "go.testExplorer.enable": true,
   "go.toolsManagement.autoUpdate": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "material-icon-theme.folders.color": "#ccd1f9",
@@ -146,10 +146,16 @@
   "window.confirmBeforeClose": "keyboardOnly",
   "window.nativeTabs": true,
   "window.zoomLevel": 1,
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
-  "zenMode.hideActivityBar": false
+  "zenMode.hideActivityBar": false,
+  // "workbench.fontAliasing": "auto",
+  "workbench.activityBar.location": "hidden",
+  "ctagsSupport.ctagsFilename": "tags",
+  "writeTimestamp.bCustomFormat": "[y-mm-dd @ h:MM:SS AA] ",
+  "editor.wordBasedSuggestions": "allDocuments",
+  "window.customTitleBarVisibility": "never",
+  "playwright.reuseBrowser": false,
+  "playwright.showTrace": true
 }

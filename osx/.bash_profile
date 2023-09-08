@@ -40,11 +40,11 @@ case $- in
 esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth:erasedups
-HISTFILESIZE=999999
-HISTSIZE=99999
-HISTTIMEFORMAT="[%F %T] "
-HISTIGNORE="ls:ll:exit:history:jobs:cls:clear"
+export HISTCONTROL=ignoreboth:erasedups
+export HISTFILESIZE=999999
+export HISTSIZE=99999
+export HISTTIMEFORMAT="[%F %T] "
+export HISTIGNORE="ls:ll:exit:history:jobs:cls:clear"
 
 
 # append to the history file, don't overwrite it
@@ -59,7 +59,7 @@ shopt -s checkwinsize
 export EDITOR="nvim"
 
 
-export GRC=`which grc`
+export GRC=$(which grc)
 if [ "$TERM" != dumb ] && [ -n "$GRC" ]
 then
   alias colourify="$GRC -es --colour=auto"
