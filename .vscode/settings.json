@@ -31,6 +31,7 @@
   "clock.format": "hh:MM TT",
   "clock.iconName": "watch",
   "clock.updateInterval": 5000,
+  "ctagsSupport.ctagsFilename": "tags",
   "debug.allowBreakpointsEverywhere": false,
   "debug.internalConsoleOptions": "neverOpen",
   "debug.javascript.codelens.npmScripts": "never",
@@ -48,7 +49,6 @@
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
-  "editor.scrollbar.verticalScrollbarSize": 5,
   "editor.letterSpacing": -0.3,
   "editor.lineHeight": 1.1,
   "editor.minimap.enabled": true,
@@ -60,6 +60,8 @@
     "strings": true
   },
   "editor.renderLineHighlight": "all",
+  "editor.scrollbar.verticalScrollbarSize": 5,
+  "editor.wordBasedSuggestions": "allDocuments",
   "editor.wordWrap": "on",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -80,15 +82,14 @@
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "files.autoSave": "onFocusChange",
   "files.enableTrash": false,
-  // "go.enableCodeLens": {
-  //   "runtest": true
-  // },
   "go.lintFlags": ["--fast"],
   "go.lintTool": "golangci-lint",
   "go.testExplorer.enable": true,
   "go.toolsManagement.autoUpdate": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "material-icon-theme.folders.color": "#ccd1f9",
+  "playwright.reuseBrowser": false,
+  "playwright.showTrace": true,
   "prettier.useEditorConfig": false,
   "redhat.telemetry.enabled": false,
   "terminal.integrated.macOptionIsMeta": true,
@@ -144,18 +145,13 @@
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
   "window.confirmBeforeClose": "keyboardOnly",
+  "window.customTitleBarVisibility": "never",
   "window.nativeTabs": true,
   "window.zoomLevel": 1,
+  "workbench.activityBar.location": "hidden",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
-  "zenMode.hideActivityBar": false,
-  // "workbench.fontAliasing": "auto",
-  "workbench.activityBar.location": "hidden",
-  "ctagsSupport.ctagsFilename": "tags",
   "writeTimestamp.bCustomFormat": "[y-mm-dd @ h:MM:SS AA] ",
-  "editor.wordBasedSuggestions": "allDocuments",
-  "window.customTitleBarVisibility": "never",
-  "playwright.reuseBrowser": false,
-  "playwright.showTrace": true
+  "zenMode.hideActivityBar": false
 }

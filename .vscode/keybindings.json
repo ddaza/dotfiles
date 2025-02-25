@@ -80,5 +80,10 @@
   {
     "key": "shift+cmd+j",
     "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "writeTimestamp.perform",
+    "when": "editorTextFocus"
   }
 ]

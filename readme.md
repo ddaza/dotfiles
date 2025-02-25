@@ -27,11 +27,10 @@ https://github.com/romkatv/gitstatus
 
 # VsCodium
 
-I use the vscode alternative and sometimes their extensions are not updated as often or are as popular.
-So, to get the VsCode extensions you need to chance a config file like this:
+To use vscode marketplace extensions we need to chance a config file.
 
-- The file is in `/Applications/VSCodium.app/Contents/Resources/app/product.json`
-- you need to change the `extensionGallery` key from this
+- The file is in (in MacOs) `/Applications/VSCodium.app/Contents/Resources/app/product.json`
+- Change the `extensionGallery` key from this
 
   ```
   "extensionsGallery": {
@@ -49,6 +48,25 @@ So, to get the VsCode extensions you need to chance a config file like this:
   ```
 
 - change it back when done
+
+
+## Backup Extensions
+
+According to this [Stack Overflow](https://superuser.com/questions/1080682/how-do-i-back-up-my-vs-code-settings-and-list-of-installed-extensions)
+
+Here is how to:
+
+Backup the extensions list
+```sh
+codium --list-extensions > extensions.txt
+```
+
+And install it
+```sh
+cat extensions.txt | xargs -n 1 codium --install-extension
+```
+
+
 
 # Powerline fonts
 

@@ -18,6 +18,7 @@ git clone https://github.com/haya14busa/incsearch-easymotion.vim
 git clone https://github.com/haya14busa/incsearch-fuzzy.vim
 git clone https://github.com/haya14busa/incsearch.vim
 git clone https://github.com/neoclide/jsonc.vim
+git clone https://github.com/rebelot/kanagawa.nvim.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git
 git clone https://github.com/joshdick/onedark.vim.git

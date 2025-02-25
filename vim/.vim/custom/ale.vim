@@ -2,7 +2,7 @@ let g:ale_linters = {
       \   'javascript': ['eslint', 'tsserver', 'cspell'],
       \   'typescript': ['eslint', 'tsserver', 'cspell'],
       \   'typescriptreact': ['eslint', 'tsserver', 'cspell'],
-      \   'markdown': ['remark_lint', 'vale', 'cspell'],
+      \   'markdown': ['remark_lint', 'vale', 'cspell', 'alex'],
       \   'gitcommit': ['vale', 'cspell'],
       \   'json': ['jq', 'jsonlint'],
       \   'rust': ['analyzer'],
