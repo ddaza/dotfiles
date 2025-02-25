@@ -26,6 +26,8 @@ runtime custom/nerdtree_git.vim
 runtime custom/hardmode.vim
 runtime custom/relative.vim
 runtime custom/gofmt.vim
+runtime custom/bujo.vim
+runtime custom/deno.vim
 "--------------------------------
 
 " Add this in the gits config

@@ -1,9 +1,30 @@
 [core]
   editor = nvim
+  pager = delta
   ignorecase = false
   excludesfile = /Users/[USER]/.gitignore
+[color]
+  ui = auto
 [diff]
+  colorMoved = default
   mnemonicprefix = true
+[delta]
+  side-by-side = false
+  line-numbers = true
+  syntax-theme = Dracula
+
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
+
+[delta "line-numbers"]
+  line-numbers-left-style = cyan
+  line-numbers-right-style = cyan
+  line-numbers-minus-style = 124
+  line-numbers-plus-style = 28
+
 [merge]
   conflictstyle = merge
   tool = fugitive
@@ -19,3 +40,5 @@
   rebase = false
 [init]
 	defaultBranch = main
+[push]
+  autoSetupRemote = true

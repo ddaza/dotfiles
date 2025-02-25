@@ -28,5 +28,8 @@ ts:*.{ts,tsx,mts}
 testgo:*_test.go
 
 --type-add
-testgo:mocks/*
+testgo:mock_*.go
+
+--type-add
+vcl:*.vcl
 
