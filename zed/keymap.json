@@ -24,7 +24,7 @@
     "context": "vim_mode == normal && !menu",
     "bindings": {
       "\\ f r": "workspace::CopyRelativePath",
-      "\\ v a": "editor::SelectAll"
+      "v a f": "editor::SelectAll"
     }
   },
   {

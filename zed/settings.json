@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "assistant": {
     "default_model": {
       "model": "claude-3-5-sonnet",
@@ -24,6 +27,9 @@
   "file_finder": {
     "modal_max_width": "medium"
   },
+  "jupyter": {
+    "enabled": false
+  },
   "git": {
     "inline_blame": {
       "delay_ms": 3333
@@ -31,8 +37,8 @@
   },
   "gutter": {
     "line_numbers": true,
-    "folds": false,
-    "code_actions": false
+    "folds": false
+    // "code_actions": false
   },
   "preview_tabs": {
     "enabled": true,
@@ -57,7 +63,7 @@
     "regex": true
   },
   "theme": {
-    "dark": "Colorizer",
+    "dark": "Colorizer Pro",
     "light": "One Light",
     "mode": "system"
   },
