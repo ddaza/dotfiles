@@ -1,3 +1,4 @@
+```sh
 # Clone with minimal history + avoid downloading file contents + enable sparse checkout
 git clone --depth=1 --filter=blob:none --sparse <repo-url>
 
@@ -15,3 +16,4 @@ git sparse-checkout add another/path
 
 # (Optional) Update to latest commit
 git pull origin main
+```
