@@ -14,6 +14,9 @@ git sparse-checkout set path/to/file_or_directory
 # (Optional) Add more paths later
 git sparse-checkout add another/path
 
+# (Optional) Edit the .git/info/sparse-checkout file to add more
+vim .git/info/sparse-checkout
+
 # (Optional) Update to latest commit
 git pull origin main
 ```
