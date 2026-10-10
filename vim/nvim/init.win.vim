@@ -24,6 +24,7 @@ if filereadable($HOME . '/_vimrc')
 endif
 
 "nnoremap <silent> <Leader>ki       :ALEHover<CR>
+nnoremap <leader>f :<C-U>silent! call v:lua.vim.lsp.buf.format({'async': 1})<CR>
 
 " 4) Neovim has already sourced the default runtimepath plugin scripts before
 "    this init file ran, so the bundle plugin files we just added must be

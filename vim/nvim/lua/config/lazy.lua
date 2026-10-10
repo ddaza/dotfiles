@@ -2,13 +2,13 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({"git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath})
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo(
             {
-                {"Failed to clone lazy.nvim:\n", "ErrorMsg"},
-                {out, "WarningMsg"},
-                {"\nPress any key to exit..."}
+                { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+                { out,                            "WarningMsg" },
+                { "\nPress any key to exit..." }
             },
             true,
             {}
@@ -39,21 +39,23 @@ require("lazy").setup(
                     g.ale_ruby_rubocop_auto_correct_all = 1
 
                     g.ale_linters = {
-                        lua = {"luacheck", "cspell"},
-                        go = {"gobuild", "govet", "golangci-lint"}
+                        lua = { "luacheck", "cspell" },
+                        go = { "gobuild", "govet", "golangci-lint" },
+                        python = { "ruff", "black" }
                     }
 
                     g.ale_fixers = {
-                        go = {"gopls"},
-                        lua = {"luafmt"},
-                        javascript = {"prettier"}
+                        go = { "gopls" },
+                        lua = { "luafmt" },
+                        javascript = { "prettier" },
+                        python = { "ruff", "black" }
                     }
 
                     --g.ale_go_gopls_executable = vim.fn.expand("~/go/bin/gopls.exe")
 
                     g.ale_fix_on_save = 1
                     g.ale_hover_to_preview = 1
-                    g.ale_floating_window_border = {"│", "─", "╭", "╮", "╯", "╰", "│", "─"}
+                    g.ale_floating_window_border = { "│", "─", "╭", "╮", "╯", "╰", "│", "─" }
                     g.ale_hover_to_floating_preview = 1
                     g.ale_detail_to_floating_preview = 0
                     g.ale_set_loclist = 1
@@ -68,13 +70,15 @@ require("lazy").setup(
                 config = function()
                     local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+                    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+
                     vim.keymap.set("n", "<leader>ki", vim.diagnostic.open_float)
 
                     vim.api.nvim_create_autocmd(
                         "BufWritePost",
                         {
                             callback = function()
-                                vim.diagnostic.setloclist({open = false})
+                                vim.diagnostic.setloclist({ open = false })
                             end
                         }
                     )
@@ -94,7 +98,25 @@ require("lazy").setup(
                     )
 
                     local servers = {
-                        gopls = {},
+                        gopls = {
+                            -- Enable semantic tokens for advanced type highlighting
+                            semanticTokens = true,
+                            -- Optional: Extra gopls analysis adjustments
+                            analyses = {
+                                unusedparams = true
+                            },
+                            staticcheck = true,
+                            hints = {
+                                -- Show variable types on assignment. Helpful for learning Go types.
+                                assignVariableTypes = true,
+                                -- Show constant values inline.
+                                constantValues = true,
+                                -- Show parameter names in calls.
+                                parameterNames = true,
+                                functionTypeParameters = true,
+                                rangeVariableTypes = true
+                            }
+                        },
                         ts_ls = {},
                         pyright = {},
                         zls = {},
@@ -105,7 +127,7 @@ require("lazy").setup(
                             settings = {
                                 Lua = {
                                     diagnostics = {
-                                        globals = {"vim"}
+                                        globals = { "vim" }
                                     },
                                     workspace = {
                                         checkThirdParty = false,
@@ -129,7 +151,8 @@ require("lazy").setup(
                 dependencies = {
                     "saghen/blink.lib",
                     -- optional: provides snippets for the snippet source
-                    "rafamadriz/friendly-snippets"
+                    "rafamadriz/friendly-snippets",
+                    "neovim/nvim-lspconfig"
                 },
                 build = function()
                     -- build the fuzzy matcher, optionally add a timeout to `pwait(timeout_ms)`
@@ -154,18 +177,18 @@ require("lazy").setup(
                     keymap = {
                         preset = "enter",
                         -- Chained commands
-                        ["<S-Tab>"] = {"select_prev", "fallback"},
-                        ["<Tab>"] = {"select_next", "fallback"}
+                        ["<S-Tab>"] = { "select_prev", "fallback" },
+                        ["<Tab>"] = { "select_next", "fallback" }
                     },
                     -- (Default) Only show the documentation popup when manually triggered
                     completion = {
-                        documentation = {auto_show = false},
+                        documentation = { auto_show = false },
                         menu = {
                             draw = {
                                 columns = {
-                                    {"label", "label_description", gap = 1},
-                                    {"kind_icon"},
-                                    {"kind"}
+                                    { "label",    "label_description", gap = 1 },
+                                    { "kind_icon" },
+                                    { "kind" }
                                 },
                                 components = {
                                     kind_icon = {
@@ -176,14 +199,14 @@ require("lazy").setup(
 
                                             local is_unknown_type =
                                                 vim.tbl_contains(
-                                                {"link", "socket", "fifo", "char", "block", "unknown"},
-                                                ctx.item.data.type
-                                            )
+                                                    { "link", "socket", "fifo", "char", "block", "unknown" },
+                                                    ctx.item.data.type
+                                                )
                                             local mini_icon, _ =
                                                 require("mini.icons").get(
-                                                is_unknown_type and "os" or ctx.item.data.type,
-                                                is_unknown_type and "" or ctx.label
-                                            )
+                                                    is_unknown_type and "os" or ctx.item.data.type,
+                                                    is_unknown_type and "" or ctx.label
+                                                )
 
                                             return (mini_icon or ctx.kind_icon) .. ctx.icon_gap
                                         end,
@@ -194,14 +217,14 @@ require("lazy").setup(
 
                                             local is_unknown_type =
                                                 vim.tbl_contains(
-                                                {"link", "socket", "fifo", "char", "block", "unknown"},
-                                                ctx.item.data.type
-                                            )
+                                                    { "link", "socket", "fifo", "char", "block", "unknown" },
+                                                    ctx.item.data.type
+                                                )
                                             local mini_icon, mini_hl =
                                                 require("mini.icons").get(
-                                                is_unknown_type and "os" or ctx.item.data.type,
-                                                is_unknown_type and "" or ctx.label
-                                            )
+                                                    is_unknown_type and "os" or ctx.item.data.type,
+                                                    is_unknown_type and "" or ctx.label
+                                                )
                                             return mini_icon ~= nil and mini_hl or ctx.kind_hl
                                         end
                                     }
@@ -211,24 +234,29 @@ require("lazy").setup(
                     },
                     -- (Default) list of enabled providers defined so that you can extend it
                     -- elsewhere in your config, without redefining it, due to `opts_extend`
-                    sources = {default = {"lsp", "path", "snippets", "buffer"}},
+                    sources = { default = { "lsp", "path", "snippets", "buffer" } },
                     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
                     -- You may use a lua implementation instead by using `implementation = "lua"`
                     -- See the fuzzy documentation for more information
-                    fuzzy = {implementation = "lua"}
+                    fuzzy = { implementation = "lua" }
                 },
-                opts_extend = {"sources.default"}
+                opts_extend = { "sources.default" }
             },
-            {"rafamadriz/friendly-snippets"},
-            {"onsails/lspkind.nvim"},
-            {"nvim-mini/mini.icons", version = "*"}
+            { "rafamadriz/friendly-snippets" },
+            { "onsails/lspkind.nvim" },
+            { "nvim-mini/mini.icons",        version = "*" },
+            {
+                "scottmckendry/cyberdream.nvim",
+                lazy = false,
+                priority = 1000,
+            }
 
             -- { import = "plugins" },
         },
         -- Configure any other settings here. See the documentation for more details.
         -- colorscheme that will be used when installing plugins.
-        install = {colorscheme = {"habamax"}},
+        install = { colorscheme = { "habamax" } },
         -- automatically check for plugin updates
-        checker = {enabled = true}
+        checker = { enabled = true }
     }
 )
